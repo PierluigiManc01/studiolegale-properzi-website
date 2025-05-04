@@ -36,7 +36,7 @@ const Navbar = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
+        isScrolled ? "bg-white shadow-md py-3" : "bg-transparent py-5"
       )}
     >
       <div className="container-custom flex items-center justify-between">
@@ -44,31 +44,31 @@ const Navbar = () => {
           <img
             src="/lovable-uploads/34c2cf6e-cb1d-429d-8b66-846d63dc0d61.png"
             alt="Properzi Studio Legale"
-            className="h-12 md:h-14"
+            className="h-10 md:h-12"
           />
         </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-10">
           <Link
             to="/"
-            className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors"
+            className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm"
           >
             Home
           </Link>
           <Link
             to="/success-stories"
-            className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors"
+            className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm"
           >
             Casi di Successo
           </Link>
           <Link
             to="/contact"
-            className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors"
+            className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm"
           >
             Contatti
           </Link>
-          <Button className="bg-properzi-beige hover:bg-properzi-navy text-properzi-navy hover:text-properzi-beige transition-colors">
+          <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors uppercase text-xs tracking-wider">
             <a href="tel:+123456789">Prenota Consulenza</a>
           </Button>
         </div>
@@ -92,26 +92,26 @@ const Navbar = () => {
           <div className="container-custom py-4 flex flex-col space-y-4">
             <Link
               to="/"
-              className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors py-2"
+              className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm py-2"
               onClick={closeMobileMenu}
             >
               Home
             </Link>
             <Link
               to="/success-stories"
-              className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors py-2"
+              className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm py-2"
               onClick={closeMobileMenu}
             >
               Casi di Successo
             </Link>
             <Link
               to="/contact"
-              className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors py-2"
+              className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm py-2"
               onClick={closeMobileMenu}
             >
               Contatti
             </Link>
-            <Button className="bg-properzi-beige hover:bg-properzi-navy text-properzi-navy hover:text-properzi-beige transition-colors w-full">
+            <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors uppercase text-xs tracking-wider w-full">
               <a href="tel:+123456789">Prenota Consulenza</a>
             </Button>
           </div>

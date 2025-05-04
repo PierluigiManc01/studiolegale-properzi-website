@@ -1,347 +1,243 @@
 
-import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, Briefcase, Users, FileText } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "sonner";
 
 const SuccessStories = () => {
-  const handleCVSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    toast.success("Il tuo CV è stato inviato con successo!");
-    // Reset the form
-    (e.target as HTMLFormElement).reset();
-  };
-
   return (
     <div className="pt-24">
       {/* Hero Section */}
-      <section className="bg-properzi-navy text-white py-16">
+      <section className="bg-properzi-navy text-white py-12 banner-clip">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-              I Nostri Casi di Successo
+          <div className="max-w-3xl mx-auto text-center">
+            <h1 className="page-title text-white">
+              Casi di Successo
             </h1>
+            <div className="divider mx-auto bg-properzi-beige"></div>
             <p className="text-lg text-white/80 mb-0">
-              Scopri come abbiamo aiutato i nostri clienti a superare sfide legali e ottenere risultati positivi 
-              attraverso la nostra esperienza legale dedicata e il nostro approccio personalizzato.
+              Scopri come abbiamo aiutato i nostri clienti a superare sfide legali complesse
             </p>
           </div>
         </div>
       </section>
 
-      {/* Case Studies Section */}
+      {/* Cases Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto mb-12 text-center animate-slide-in">
-            <h2 className="text-3xl font-serif mb-4 text-properzi-navy">Casi di Studio Significativi</h2>
+          <div className="max-w-3xl mx-auto mb-10 text-center">
+            <h2 className="section-title text-center">Aree di Intervento</h2>
+            <div className="divider mx-auto"></div>
             <p className="text-properzi-navy/80">
               Esplora alcuni dei nostri casi più significativi e scopri come la nostra competenza legale ha fatto 
               la differenza nella vita e nelle attività dei nostri clienti.
             </p>
           </div>
 
-          <Tabs defaultValue="corporate" className="animate-fade-in">
-            <TabsList className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-              <TabsTrigger value="corporate" className="data-[state=active]:bg-properzi-beige data-[state=active]:text-properzi-navy">
-                <Briefcase className="mr-2 h-4 w-4" />
-                Diritto Societario
+          <Tabs defaultValue="civile" className="mt-10">
+            <TabsList className="flex flex-wrap justify-center gap-2 mb-8 bg-transparent">
+              <TabsTrigger value="civile" className="data-[state=active]:bg-properzi-navy data-[state=active]:text-white border border-properzi-navy">
+                Diritto Civile
               </TabsTrigger>
-              <TabsTrigger value="litigation" className="data-[state=active]:bg-properzi-beige data-[state=active]:text-properzi-navy">
-                <FileText className="mr-2 h-4 w-4" />
-                Contenzioso
-              </TabsTrigger>
-              <TabsTrigger value="family" className="data-[state=active]:bg-properzi-beige data-[state=active]:text-properzi-navy">
-                <Users className="mr-2 h-4 w-4" />
+              <TabsTrigger value="famiglia" className="data-[state=active]:bg-properzi-navy data-[state=active]:text-white border border-properzi-navy">
                 Diritto di Famiglia
+              </TabsTrigger>
+              <TabsTrigger value="immobiliare" className="data-[state=active]:bg-properzi-navy data-[state=active]:text-white border border-properzi-navy">
+                Diritto Immobiliare
+              </TabsTrigger>
+              <TabsTrigger value="societario" className="data-[state=active]:bg-properzi-navy data-[state=active]:text-white border border-properzi-navy">
+                Diritto Societario
               </TabsTrigger>
             </TabsList>
 
-            <TabsContent value="corporate" className="animate-slide-in">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <Card className="border-properzi-beige/10">
-                  <CardHeader>
-                    <CardTitle>Fusione Internazionale di Successo</CardTitle>
-                    <CardDescription>Transazione Transfrontaliera da $50M</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p>
-                      Abbiamo guidato un'azienda tecnologica di medie dimensioni attraverso una complessa fusione internazionale 
-                      del valore di $50 milioni. Il nostro team legale ha navigato gli ostacoli normativi in tre 
-                      giurisdizioni, garantendo la conformità mentre salvaguardava gli interessi del nostro cliente.
-                    </p>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Sfida:</span>
-                      <span className="text-right">Molteplici giurisdizioni e quadri normativi</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Risultato:</span>
-                      <span className="text-right">Fusione riuscita con ritardi normativi minimi</span>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-properzi-beige/10">
-                  <CardHeader>
-                    <CardTitle>Ristrutturazione Aziendale</CardTitle>
-                    <CardDescription>Strategia di Rilancio Finanziario</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p>
-                      Il nostro studio ha assistito una catena di negozi al dettaglio in difficoltà con una completa ristrutturazione 
-                      aziendale che ha evitato il fallimento e preservato oltre 500 posti di lavoro. Abbiamo sviluppato un piano 
-                      strategico di riorganizzazione del debito che ha permesso una ripresa sostenibile.
-                    </p>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Sfida:</span>
-                      <span className="text-right">Fallimento imminente e pressione dei creditori</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Risultato:</span>
-                      <span className="text-right">Completa ripresa dell'attività entro 18 mesi</span>
-                    </div>
-                  </CardContent>
-                </Card>
+            <TabsContent value="civile" className="animate-fade-in">
+              <div className="grid grid-cols-1 gap-6">
+                <div className="bg-properzi-navy/5 p-6 rounded-lg">
+                  <h3 className="text-xl font-cinzel text-properzi-navy mb-3">Risarcimento per Danno Biologico</h3>
+                  <p className="mb-4 text-properzi-navy/80">
+                    Abbiamo ottenuto un significativo risarcimento per un cliente che ha subito gravi lesioni a seguito di 
+                    un incidente stradale. La nostra assistenza completa ha incluso la raccolta di prove mediche, la dimostrazione della 
+                    responsabilità della controparte e la quantificazione del danno biologico e morale.
+                  </p>
+                  <div className="flex justify-between text-sm border-t border-properzi-beige/20 pt-4 mt-4">
+                    <span className="text-properzi-beige font-medium">Valore della causa:</span>
+                    <span className="text-right">€120.000</span>
+                  </div>
+                </div>
+                
+                <div className="bg-properzi-navy/5 p-6 rounded-lg">
+                  <h3 className="text-xl font-cinzel text-properzi-navy mb-3">Inadempimento Contrattuale</h3>
+                  <p className="mb-4 text-properzi-navy/80">
+                    Abbiamo rappresentato un'azienda in una controversia per inadempimento contrattuale contro un fornitore che 
+                    non aveva rispettato i termini di consegna causando gravi danni economici. Il caso si è concluso con un accordo 
+                    transattivo favorevole per il nostro cliente.
+                  </p>
+                  <div className="flex justify-between text-sm border-t border-properzi-beige/20 pt-4 mt-4">
+                    <span className="text-properzi-beige font-medium">Risultato:</span>
+                    <span className="text-right">Accordo transattivo di €85.000</span>
+                  </div>
+                </div>
               </div>
             </TabsContent>
 
-            <TabsContent value="litigation" className="animate-slide-in">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <Card className="border-properzi-beige/10">
-                  <CardHeader>
-                    <CardTitle>Difesa della Proprietà Intellettuale</CardTitle>
-                    <CardDescription>Caso di Violazione di Brevetto</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p>
-                      Abbiamo difeso con successo un produttore di dispositivi medici contro accuse di violazione di brevetto 
-                      da parte di un concorrente più grande. Il nostro team di contenzioso ha confutato la validità delle rivendicazioni 
-                      brevettuali dell'attore, ottenendo un completo rigetto del caso.
-                    </p>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Sfida:</span>
-                      <span className="text-right">Richiesta di risarcimento di $15M da leader del settore</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Risultato:</span>
-                      <span className="text-right">Rigetto del caso e accordo sulla contro-richiesta</span>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-properzi-beige/10">
-                  <CardHeader>
-                    <CardTitle>Risoluzione Controversia Edilizia</CardTitle>
-                    <CardDescription>Storia di Successo in Arbitrato</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p>
-                      Il nostro team di contenzioso ha rappresentato uno sviluppatore immobiliare in una complessa controversia 
-                      edilizia che coinvolgeva violazioni contrattuali e reclami per lavori difettosi. Attraverso un arbitrato 
-                      strategico, abbiamo ottenuto un esito favorevole per il nostro cliente.
-                    </p>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Sfida:</span>
-                      <span className="text-right">Molteplici parti e ambiguità contrattuali</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Risultato:</span>
-                      <span className="text-right">Recupero di $4.2M attraverso accordo negoziato</span>
-                    </div>
-                  </CardContent>
-                </Card>
+            <TabsContent value="famiglia">
+              <div className="grid grid-cols-1 gap-6">
+                <div className="bg-properzi-navy/5 p-6 rounded-lg">
+                  <h3 className="text-xl font-cinzel text-properzi-navy mb-3">Affidamento dei Minori</h3>
+                  <p className="mb-4 text-properzi-navy/80">
+                    Abbiamo assistito un genitore in una complessa causa di affidamento, riuscendo a dimostrare che 
+                    l'affidamento condiviso con collocamento prevalente presso il nostro cliente rappresentava la soluzione 
+                    migliore per il benessere dei figli minori.
+                  </p>
+                  <div className="flex justify-between text-sm border-t border-properzi-beige/20 pt-4 mt-4">
+                    <span className="text-properzi-beige font-medium">Durata del procedimento:</span>
+                    <span className="text-right">8 mesi</span>
+                  </div>
+                </div>
+                
+                <div className="bg-properzi-navy/5 p-6 rounded-lg">
+                  <h3 className="text-xl font-cinzel text-properzi-navy mb-3">Divisione Patrimoniale</h3>
+                  <p className="mb-4 text-properzi-navy/80">
+                    In un caso di divorzio con significativi beni immobiliari e attività imprenditoriali, abbiamo negoziato 
+                    un accordo equo per la divisione del patrimonio che ha tutelato gli interessi economici del nostro cliente 
+                    preservando la continuità aziendale.
+                  </p>
+                  <div className="flex justify-between text-sm border-t border-properzi-beige/20 pt-4 mt-4">
+                    <span className="text-properzi-beige font-medium">Patrimonio coinvolto:</span>
+                    <span className="text-right">€1.5 milioni</span>
+                  </div>
+                </div>
               </div>
             </TabsContent>
-
-            <TabsContent value="family" className="animate-slide-in">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <Card className="border-properzi-beige/10">
-                  <CardHeader>
-                    <CardTitle>Accordo di Divorzio con Patrimonio Elevato</CardTitle>
-                    <CardDescription>Risoluzione Equa</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p>
-                      Abbiamo rappresentato un cliente in un divorzio con patrimonio elevato che coinvolgeva complesse valutazioni 
-                      aziendali e divisione dei beni. Attraverso una negoziazione abile, abbiamo ottenuto un accordo equo 
-                      senza contenziosi prolungati, preservando i rapporti familiari.
-                    </p>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Sfida:</span>
-                      <span className="text-right">Complessa valutazione e divisione dei beni</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Risultato:</span>
-                      <span className="text-right">Accordo amichevole e interessi aziendali preservati</span>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <Card className="border-properzi-beige/10">
-                  <CardHeader>
-                    <CardTitle>Affidamento Internazionale di Minori</CardTitle>
-                    <CardDescription>Risoluzione Transfrontaliera</CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <p>
-                      Il nostro team di diritto di famiglia ha risolto con successo una complessa controversia internazionale 
-                      sull'affidamento dei figli che coinvolgeva disposizioni della Convenzione dell'Aia. Abbiamo ottenuto un 
-                      accordo favorevole che ha dato priorità al benessere del bambino proteggendo i diritti genitoriali del nostro cliente.
-                    </p>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Sfida:</span>
-                      <span className="text-right">Conflitti giurisdizionali e diritto internazionale</span>
-                    </div>
-                    <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Risultato:</span>
-                      <span className="text-right">Accordo di affidamento congiunto con chiari diritti di visita</span>
-                    </div>
-                  </CardContent>
-                </Card>
+            
+            <TabsContent value="immobiliare">
+              <div className="grid grid-cols-1 gap-6">
+                <div className="bg-properzi-navy/5 p-6 rounded-lg">
+                  <h3 className="text-xl font-cinzel text-properzi-navy mb-3">Contestazione di Vizi Costruttivi</h3>
+                  <p className="mb-4 text-properzi-navy/80">
+                    Abbiamo rappresentato un condominio in una causa contro la società costruttrice per gravi vizi 
+                    costruttivi dell'edificio. La nostra azione ha portato al risarcimento dei danni e all'esecuzione 
+                    delle opere di ripristino necessarie.
+                  </p>
+                  <div className="flex justify-between text-sm border-t border-properzi-beige/20 pt-4 mt-4">
+                    <span className="text-properzi-beige font-medium">Risarcimento ottenuto:</span>
+                    <span className="text-right">€350.000 + opere di ripristino</span>
+                  </div>
+                </div>
+                
+                <div className="bg-properzi-navy/5 p-6 rounded-lg">
+                  <h3 className="text-xl font-cinzel text-properzi-navy mb-3">Vendita Immobiliare Contestata</h3>
+                  <p className="mb-4 text-properzi-navy/80">
+                    Abbiamo difeso un venditore in una controversia relativa a una vendita immobiliare contestata 
+                    dall'acquirente per presunti vizi occulti. La causa si è conclusa con il rigetto della domanda avversaria 
+                    e la conferma della validità del contratto di compravendita.
+                  </p>
+                  <div className="flex justify-between text-sm border-t border-properzi-beige/20 pt-4 mt-4">
+                    <span className="text-properzi-beige font-medium">Valore dell'immobile:</span>
+                    <span className="text-right">€420.000</span>
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
+            
+            <TabsContent value="societario">
+              <div className="grid grid-cols-1 gap-6">
+                <div className="bg-properzi-navy/5 p-6 rounded-lg">
+                  <h3 className="text-xl font-cinzel text-properzi-navy mb-3">Acquisizione Aziendale</h3>
+                  <p className="mb-4 text-properzi-navy/80">
+                    Abbiamo assistito una società cliente nell'acquisizione di un'azienda concorrente, gestendo la due diligence, 
+                    la negoziazione e la redazione dei contratti di acquisizione, garantendo la tutela degli interessi del nostro 
+                    cliente e la sicurezza dell'operazione.
+                  </p>
+                  <div className="flex justify-between text-sm border-t border-properzi-beige/20 pt-4 mt-4">
+                    <span className="text-properzi-beige font-medium">Valore dell'operazione:</span>
+                    <span className="text-right">€2.8 milioni</span>
+                  </div>
+                </div>
+                
+                <div className="bg-properzi-navy/5 p-6 rounded-lg">
+                  <h3 className="text-xl font-cinzel text-properzi-navy mb-3">Ristrutturazione Societaria</h3>
+                  <p className="mb-4 text-properzi-navy/80">
+                    Abbiamo guidato una società in crisi attraverso un processo di ristrutturazione aziendale, consentendole 
+                    di superare le difficoltà finanziarie attraverso accordi con i creditori e una riorganizzazione interna, 
+                    evitando procedure concorsuali e preservando posti di lavoro.
+                  </p>
+                  <div className="flex justify-between text-sm border-t border-properzi-beige/20 pt-4 mt-4">
+                    <span className="text-properzi-beige font-medium">Debito ristrutturato:</span>
+                    <span className="text-right">€3.5 milioni</span>
+                  </div>
+                </div>
               </div>
             </TabsContent>
           </Tabs>
+          
+          <div className="text-center mt-10">
+            <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors">
+              <a href="/contact" className="flex items-center gap-2">
+                Richiedi una consulenza <ArrowRight size={16} />
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
-
-      {/* Intern Stories Section */}
+      
+      {/* Testimonials Section */}
       <section className="section-padding bg-properzi-navy/5">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto mb-12 text-center animate-slide-in">
-            <h2 className="text-3xl font-serif mb-4 text-properzi-navy">La Vita presso Properzi Studio</h2>
+          <div className="max-w-3xl mx-auto mb-10 text-center">
+            <h2 className="section-title text-center">Cosa Dicono i Nostri Clienti</h2>
+            <div className="divider mx-auto"></div>
             <p className="text-properzi-navy/80">
-              Ascolta dai nostri tirocinanti e membri del team le loro esperienze lavorative presso Properzi Studio Legale 
-              e come il nostro ambiente collaborativo nutre il talento legale.
+              Le opinioni di chi ha già scelto la nostra consulenza legale
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <Card className="border-properzi-beige/10 animate-fade-in">
-              <CardHeader>
-                <div className="h-14 w-14 rounded-full bg-properzi-navy/10 flex items-center justify-center mb-4">
-                  <span className="text-2xl font-serif text-properzi-beige">M</span>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <p className="italic text-properzi-navy/70 mb-4">
+                "Lo studio Properzi ha gestito la mia causa di risarcimento danni con grande professionalità. 
+                L'avvocato è stato sempre disponibile e mi ha tenuto costantemente aggiornato. Grazie al suo intervento 
+                ho ottenuto il massimo risarcimento possibile."
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 rounded-full bg-properzi-navy/20 flex items-center justify-center mr-3">
+                  <span className="font-cinzel text-properzi-navy font-bold">M</span>
                 </div>
-                <CardTitle>Michael Rodriguez</CardTitle>
-                <CardDescription>Tirocinante Estate 2024</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <blockquote className="text-properzi-navy/80 italic">
-                  "Il mio tirocinio presso Properzi Studio Legale è stato trasformativo. Ho avuto l'opportunità di lavorare 
-                  direttamente con avvocati senior su casi significativi, ricevendo un mentoring che è andato oltre 
-                  la conoscenza teorica all'applicazione pratica della legge."
-                </blockquote>
-              </CardContent>
-            </Card>
-
-            <Card className="border-properzi-beige/10 animate-fade-in [animation-delay:200ms]">
-              <CardHeader>
-                <div className="h-14 w-14 rounded-full bg-properzi-navy/10 flex items-center justify-center mb-4">
-                  <span className="text-2xl font-serif text-properzi-beige">S</span>
-                </div>
-                <CardTitle>Sarah Johnson</CardTitle>
-                <CardDescription>Da Assistente Legale ad Associata</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <blockquote className="text-properzi-navy/80 italic">
-                  "Ciò che è iniziato come una posizione estiva si è evoluto in una carriera gratificante. I partner hanno riconosciuto 
-                  il mio potenziale e hanno supportato il mio percorso durante la facoltà di giurisprudenza. Le opportunità di 
-                  sviluppo professionale qui sono impareggiabili, con chiari percorsi di crescita."
-                </blockquote>
-              </CardContent>
-            </Card>
-
-            <Card className="border-properzi-beige/10 animate-fade-in [animation-delay:400ms]">
-              <CardHeader>
-                <div className="h-14 w-14 rounded-full bg-properzi-navy/10 flex items-center justify-center mb-4">
-                  <span className="text-2xl font-serif text-properzi-beige">D</span>
-                </div>
-                <CardTitle>David Chen</CardTitle>
-                <CardDescription>Da Tirocinante di Ricerca ad Associato Junior</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <blockquote className="text-properzi-navy/80 italic">
-                  "La cultura collaborativa presso Properzi Studio Legale lo distingue da altri studi. I partner sono mentori 
-                  accessibili genuinamente investiti nella tua crescita. L'ambiente di lavoro stimolante è bilanciato da 
-                  colleghi di supporto che celebrano i successi reciproci."
-                </blockquote>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* CV Submission Section */}
-          <div className="bg-white p-8 rounded-lg shadow-md animate-slide-in">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <h3 className="text-2xl font-serif mb-4 text-properzi-navy">Unisciti al Nostro Team</h3>
-                <p className="mb-4 text-properzi-navy/80">
-                  Siamo sempre alla ricerca di persone di talento da far entrare nel nostro studio. Che tu sia uno studente di giurisprudenza 
-                  in cerca di opportunità di tirocinio o un professionista esperto alla ricerca della tua prossima mossa di carriera, 
-                  ci piacerebbe sentirti.
-                </p>
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-start space-x-3">
-                    <Award className="h-6 w-6 text-properzi-beige mt-1" />
-                    <div>
-                      <h4 className="font-medium text-properzi-navy">Sviluppo Professionale</h4>
-                      <p className="text-sm text-properzi-navy/70">Mentoring da parte di leader del settore e opportunità di apprendimento continuo</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Briefcase className="h-6 w-6 text-properzi-beige mt-1" />
-                    <div>
-                      <h4 className="font-medium text-properzi-navy">Casistica Stimolante</h4>
-                      <p className="text-sm text-properzi-navy/70">Lavoro su questioni legali diverse e complesse in varie aree di pratica</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <Users className="h-6 w-6 text-properzi-beige mt-1" />
-                    <div>
-                      <h4 className="font-medium text-properzi-navy">Ambiente Collaborativo</h4>
-                      <p className="text-sm text-properzi-navy/70">Cultura di team che valorizza prospettive diverse</p>
-                    </div>
-                  </div>
+                <div>
+                  <h4 className="font-medium text-properzi-navy">Marco B.</h4>
+                  <p className="text-sm text-properzi-navy/60">Cliente privato</p>
                 </div>
               </div>
-
-              <div>
-                <form onSubmit={handleCVSubmit} className="space-y-4">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Nome Completo</Label>
-                      <Input id="name" required />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email</Label>
-                      <Input id="email" type="email" required />
-                    </div>
-                  </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="phone">Telefono</Label>
-                      <Input id="phone" type="tel" />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="position">Posizione di Interesse</Label>
-                      <Input id="position" required />
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Lettera di Presentazione</Label>
-                    <Textarea id="message" rows={4} placeholder="Parlaci di te e del tuo interesse per Properzi Studio Legale" required />
-                  </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="cv">Curriculum Vitae</Label>
-                    <Input id="cv" type="file" accept=".pdf,.doc,.docx" required className="cursor-pointer" />
-                    <p className="text-xs text-properzi-navy/60 mt-1">Formati accettati: PDF, DOC, DOCX (Max 5MB)</p>
-                  </div>
-                  <Button type="submit" className="w-full bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors">
-                    Invia Candidatura
-                  </Button>
-                </form>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <p className="italic text-properzi-navy/70 mb-4">
+                "La consulenza ricevuta per la mia azienda è stata impeccabile. Lo studio ha elaborato contratti 
+                su misura per le nostre esigenze e ci ha assistito in una delicata trattativa commerciale con risultati eccellenti."
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 rounded-full bg-properzi-navy/20 flex items-center justify-center mr-3">
+                  <span className="font-cinzel text-properzi-navy font-bold">L</span>
+                </div>
+                <div>
+                  <h4 className="font-medium text-properzi-navy">Laura T.</h4>
+                  <p className="text-sm text-properzi-navy/60">Amministratore delegato</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <p className="italic text-properzi-navy/70 mb-4">
+                "Ho affrontato un difficile divorzio con l'assistenza dello Studio Properzi. L'avvocato ha mostrato 
+                grande empatia e professionalità, trovando soluzioni eque che hanno tutelato me e i miei figli."
+              </p>
+              <div className="flex items-center">
+                <div className="w-10 h-10 rounded-full bg-properzi-navy/20 flex items-center justify-center mr-3">
+                  <span className="font-cinzel text-properzi-navy font-bold">G</span>
+                </div>
+                <div>
+                  <h4 className="font-medium text-properzi-navy">Giulia R.</h4>
+                  <p className="text-sm text-properzi-navy/60">Cliente privato</p>
+                </div>
               </div>
             </div>
           </div>
