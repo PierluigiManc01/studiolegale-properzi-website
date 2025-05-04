@@ -46,15 +46,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Phone size={18} className="mr-2 mt-1 text-properzi-beige" />
-                <span>+1 (555) 123-4567</span>
+                <span>+(39) 3357252561</span>
               </li>
               <li className="flex items-start">
                 <Mail size={18} className="mr-2 mt-1 text-properzi-beige" />
-                <span>info@properzistudio.com</span>
+                <span>vanessa.properzi@libero.it</span>
               </li>
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-properzi-beige" />
-                <span>123 Legal Avenue, Suite 500<br />New York, NY 10001</span>
+                <span>Piazzale Benito Juarez 10/11<br />Roma, RM 00144</span>
               </li>
             </ul>
           </div>

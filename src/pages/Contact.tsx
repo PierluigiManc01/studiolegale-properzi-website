@@ -40,8 +40,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-lg text-properzi-navy mb-1">Telefono</h3>
                     <p className="text-properzi-navy/70 mb-1">Chiamaci direttamente:</p>
-                    <a href="tel:+15551234567" className="text-properzi-beige hover:text-properzi-navy font-medium transition-colors">
-                      +1 (555) 123-4567
+                    <a href="tel:+393357252561" className="text-properzi-beige hover:text-properzi-navy font-medium transition-colors">
+                      +39 3357252561
                     </a>
                   </div>
                 </div>
@@ -53,8 +53,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-lg text-properzi-navy mb-1">Email</h3>
                     <p className="text-properzi-navy/70 mb-1">Inviaci un messaggio:</p>
-                    <a href="mailto:info@properzistudio.com" className="text-properzi-beige hover:text-properzi-navy font-medium transition-colors">
-                      info@properzistudio.com
+                    <a href="mailto:vanessa.properzi@libero.it" className="text-properzi-beige hover:text-properzi-navy font-medium transition-colors">
+                    vanessa.properzi@libero.it
                     </a>
                   </div>
                 </div>
@@ -66,10 +66,10 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-lg text-properzi-navy mb-1">Sede dello Studio</h3>
                     <p className="text-properzi-navy/70 mb-1">Vieni a trovarci:</p>
-                    <address className="not-italic text-properzi-navy">
-                      123 Legal Avenue, Suite 500<br />
-                      New York, NY 10001<br />
-                      Stati Uniti
+                    <address href='https://maps.app.goo.gl/uLw9hFkohpKQF1CY7' className="not-italic text-properzi-navy">
+                      Piazzale Benito Juarez 10/11<br />
+                      Roma, RM 00144<br />
+                      Italia
                     </address>
                   </div>
                 </div>
@@ -83,8 +83,7 @@ const Contact = () => {
                     <p className="text-properzi-navy/70 mb-1">Siamo disponibili:</p>
                     <ul className="text-properzi-navy">
                       <li>Lunedì - Venerdì: 9:00 - 18:00</li>
-                      <li>Sabato: 10:00 - 14:00 (Su appuntamento)</li>
-                      <li>Domenica: Chiuso</li>
+                      <li>Sabato - Domenica: Chiuso</li>
                     </ul>
                   </div>
                 </div>
