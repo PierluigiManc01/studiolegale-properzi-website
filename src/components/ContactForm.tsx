@@ -19,11 +19,11 @@ import emailjs from "@emailjs/browser";
 import { Card } from "@/components/ui/card";
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, { message: "Name must be at least 2 characters." }),
-  email: z.string().email({ message: "Invalid email address." }),
-  phone: z.string().min(6, { message: "Phone number must be at least 6 characters." }),
-  subject: z.string().min(4, { message: "Subject must be at least 4 characters." }),
-  message: z.string().min(10, { message: "Message must be at least 10 characters." }),
+  name: z.string().min(2, { message: "Il nome deve contenere almeno 2 caratteri." }),
+  email: z.string().email({ message: "Indirizzo email non valido." }),
+  phone: z.string().min(6, { message: "Il numero di telefono deve contenere almeno 6 caratteri." }),
+  subject: z.string().min(4, { message: "L'oggetto deve contenere almeno 4 caratteri." }),
+  message: z.string().min(10, { message: "Il messaggio deve contenere almeno 10 caratteri." }),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
@@ -61,13 +61,13 @@ const ContactForm = () => {
       )
       .then(
         () => {
-          toast.success("Message sent successfully!");
+          toast.success("Messaggio inviato con successo!");
           form.reset();
           setIsLoading(false);
         },
         (error) => {
           console.error("EmailJS error:", error);
-          toast.error("Failed to send message. Please try again later.");
+          toast.error("Invio del messaggio fallito. Riprova più tardi.");
           setIsLoading(false);
         }
       );
@@ -83,9 +83,9 @@ const ContactForm = () => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Full Name</FormLabel>
+                  <FormLabel>Nome Completo</FormLabel>
                   <FormControl>
-                    <Input placeholder="John Doe" {...field} />
+                    <Input placeholder="Mario Rossi" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -98,7 +98,7 @@ const ContactForm = () => {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input placeholder="john.doe@example.com" {...field} />
+                    <Input placeholder="mario.rossi@esempio.com" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -111,9 +111,9 @@ const ContactForm = () => {
               name="phone"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Phone Number</FormLabel>
+                  <FormLabel>Numero di Telefono</FormLabel>
                   <FormControl>
-                    <Input placeholder="+1 (555) 123-4567" {...field} />
+                    <Input placeholder="+39 123 456 7890" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -124,9 +124,9 @@ const ContactForm = () => {
               name="subject"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Subject</FormLabel>
+                  <FormLabel>Oggetto</FormLabel>
                   <FormControl>
-                    <Input placeholder="Legal Consultation Request" {...field} />
+                    <Input placeholder="Richiesta di Consulenza Legale" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -138,10 +138,10 @@ const ContactForm = () => {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message</FormLabel>
+                <FormLabel>Messaggio</FormLabel>
                 <FormControl>
                   <Textarea
-                    placeholder="Please describe your legal situation or inquiry..."
+                    placeholder="Per favore, descrivi la tua situazione legale o richiesta..."
                     className="min-h-[150px]"
                     {...field}
                   />
@@ -155,7 +155,7 @@ const ContactForm = () => {
             className="w-full md:w-auto bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors"
             disabled={isLoading}
           >
-            {isLoading ? "Sending..." : "Send Message"}
+            {isLoading ? "Invio in corso..." : "Invia Messaggio"}
           </Button>
         </form>
       </Form>

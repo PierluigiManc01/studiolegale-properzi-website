@@ -12,7 +12,7 @@ import { toast } from "sonner";
 const SuccessStories = () => {
   const handleCVSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast.success("Your CV has been submitted successfully!");
+    toast.success("Il tuo CV è stato inviato con successo!");
     // Reset the form
     (e.target as HTMLFormElement).reset();
   };
@@ -24,11 +24,11 @@ const SuccessStories = () => {
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-serif font-bold mb-6">
-              Our Success Stories
+              I Nostri Casi di Successo
             </h1>
             <p className="text-lg text-white/80 mb-0">
-              Discover how we've helped our clients overcome legal challenges and achieve successful outcomes 
-              through our dedicated legal expertise and personalized approach.
+              Scopri come abbiamo aiutato i nostri clienti a superare sfide legali e ottenere risultati positivi 
+              attraverso la nostra esperienza legale dedicata e il nostro approccio personalizzato.
             </p>
           </div>
         </div>
@@ -38,10 +38,10 @@ const SuccessStories = () => {
       <section className="section-padding bg-white">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto mb-12 text-center animate-slide-in">
-            <h2 className="text-3xl font-serif mb-4 text-properzi-navy">Notable Case Studies</h2>
+            <h2 className="text-3xl font-serif mb-4 text-properzi-navy">Casi di Studio Significativi</h2>
             <p className="text-properzi-navy/80">
-              Explore some of our most significant cases and learn how our legal expertise has made 
-              a difference in the lives and businesses of our clients.
+              Esplora alcuni dei nostri casi più significativi e scopri come la nostra competenza legale ha fatto 
+              la differenza nella vita e nelle attività dei nostri clienti.
             </p>
           </div>
 
@@ -49,15 +49,15 @@ const SuccessStories = () => {
             <TabsList className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               <TabsTrigger value="corporate" className="data-[state=active]:bg-properzi-beige data-[state=active]:text-properzi-navy">
                 <Briefcase className="mr-2 h-4 w-4" />
-                Corporate Law
+                Diritto Societario
               </TabsTrigger>
               <TabsTrigger value="litigation" className="data-[state=active]:bg-properzi-beige data-[state=active]:text-properzi-navy">
                 <FileText className="mr-2 h-4 w-4" />
-                Litigation
+                Contenzioso
               </TabsTrigger>
               <TabsTrigger value="family" className="data-[state=active]:bg-properzi-beige data-[state=active]:text-properzi-navy">
                 <Users className="mr-2 h-4 w-4" />
-                Family Law
+                Diritto di Famiglia
               </TabsTrigger>
             </TabsList>
 
@@ -65,44 +65,44 @@ const SuccessStories = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <Card className="border-properzi-beige/10">
                   <CardHeader>
-                    <CardTitle>Successful International Merger</CardTitle>
-                    <CardDescription>$50M Cross-Border Transaction</CardDescription>
+                    <CardTitle>Fusione Internazionale di Successo</CardTitle>
+                    <CardDescription>Transazione Transfrontaliera da $50M</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p>
-                      We guided a mid-sized technology company through a complex international merger 
-                      valued at $50 million. Our legal team navigated regulatory hurdles across three 
-                      jurisdictions, ensuring compliance while safeguarding our client's interests.
+                      Abbiamo guidato un'azienda tecnologica di medie dimensioni attraverso una complessa fusione internazionale 
+                      del valore di $50 milioni. Il nostro team legale ha navigato gli ostacoli normativi in tre 
+                      giurisdizioni, garantendo la conformità mentre salvaguardava gli interessi del nostro cliente.
                     </p>
                     <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Challenge:</span>
-                      <span className="text-right">Multiple jurisdictions and regulatory frameworks</span>
+                      <span className="text-properzi-beige font-medium">Sfida:</span>
+                      <span className="text-right">Molteplici giurisdizioni e quadri normativi</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Outcome:</span>
-                      <span className="text-right">Successful merger with minimal regulatory delay</span>
+                      <span className="text-properzi-beige font-medium">Risultato:</span>
+                      <span className="text-right">Fusione riuscita con ritardi normativi minimi</span>
                     </div>
                   </CardContent>
                 </Card>
 
                 <Card className="border-properzi-beige/10">
                   <CardHeader>
-                    <CardTitle>Corporate Restructuring</CardTitle>
-                    <CardDescription>Financial Turnaround Strategy</CardDescription>
+                    <CardTitle>Ristrutturazione Aziendale</CardTitle>
+                    <CardDescription>Strategia di Rilancio Finanziario</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p>
-                      Our firm assisted a struggling retail chain with a comprehensive corporate restructuring 
-                      that prevented bankruptcy and preserved over 500 jobs. We developed a strategic debt 
-                      reorganization plan that enabled sustainable recovery.
+                      Il nostro studio ha assistito una catena di negozi al dettaglio in difficoltà con una completa ristrutturazione 
+                      aziendale che ha evitato il fallimento e preservato oltre 500 posti di lavoro. Abbiamo sviluppato un piano 
+                      strategico di riorganizzazione del debito che ha permesso una ripresa sostenibile.
                     </p>
                     <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Challenge:</span>
-                      <span className="text-right">Imminent bankruptcy and creditor pressure</span>
+                      <span className="text-properzi-beige font-medium">Sfida:</span>
+                      <span className="text-right">Fallimento imminente e pressione dei creditori</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Outcome:</span>
-                      <span className="text-right">Complete business recovery within 18 months</span>
+                      <span className="text-properzi-beige font-medium">Risultato:</span>
+                      <span className="text-right">Completa ripresa dell'attività entro 18 mesi</span>
                     </div>
                   </CardContent>
                 </Card>
@@ -113,44 +113,44 @@ const SuccessStories = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <Card className="border-properzi-beige/10">
                   <CardHeader>
-                    <CardTitle>Intellectual Property Defense</CardTitle>
-                    <CardDescription>Patent Infringement Case</CardDescription>
+                    <CardTitle>Difesa della Proprietà Intellettuale</CardTitle>
+                    <CardDescription>Caso di Violazione di Brevetto</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p>
-                      We successfully defended a medical device manufacturer against claims of patent 
-                      infringement from a larger competitor. Our litigation team disproved the validity 
-                      of the plaintiff's patent claims, securing a complete dismissal of the case.
+                      Abbiamo difeso con successo un produttore di dispositivi medici contro accuse di violazione di brevetto 
+                      da parte di un concorrente più grande. Il nostro team di contenzioso ha confutato la validità delle rivendicazioni 
+                      brevettuali dell'attore, ottenendo un completo rigetto del caso.
                     </p>
                     <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Challenge:</span>
-                      <span className="text-right">$15M infringement claim from industry leader</span>
+                      <span className="text-properzi-beige font-medium">Sfida:</span>
+                      <span className="text-right">Richiesta di risarcimento di $15M da leader del settore</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Outcome:</span>
-                      <span className="text-right">Case dismissal and counter-claim settlement</span>
+                      <span className="text-properzi-beige font-medium">Risultato:</span>
+                      <span className="text-right">Rigetto del caso e accordo sulla contro-richiesta</span>
                     </div>
                   </CardContent>
                 </Card>
 
                 <Card className="border-properzi-beige/10">
                   <CardHeader>
-                    <CardTitle>Construction Dispute Resolution</CardTitle>
-                    <CardDescription>Arbitration Success Story</CardDescription>
+                    <CardTitle>Risoluzione Controversia Edilizia</CardTitle>
+                    <CardDescription>Storia di Successo in Arbitrato</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p>
-                      Our litigation team represented a real estate developer in a complex construction 
-                      dispute involving contractual breaches and defective work claims. Through strategic 
-                      arbitration, we secured a favorable outcome for our client.
+                      Il nostro team di contenzioso ha rappresentato uno sviluppatore immobiliare in una complessa controversia 
+                      edilizia che coinvolgeva violazioni contrattuali e reclami per lavori difettosi. Attraverso un arbitrato 
+                      strategico, abbiamo ottenuto un esito favorevole per il nostro cliente.
                     </p>
                     <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Challenge:</span>
-                      <span className="text-right">Multiple parties and contractual ambiguities</span>
+                      <span className="text-properzi-beige font-medium">Sfida:</span>
+                      <span className="text-right">Molteplici parti e ambiguità contrattuali</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Outcome:</span>
-                      <span className="text-right">$4.2M recovery through negotiated settlement</span>
+                      <span className="text-properzi-beige font-medium">Risultato:</span>
+                      <span className="text-right">Recupero di $4.2M attraverso accordo negoziato</span>
                     </div>
                   </CardContent>
                 </Card>
@@ -161,44 +161,44 @@ const SuccessStories = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <Card className="border-properzi-beige/10">
                   <CardHeader>
-                    <CardTitle>High-Asset Divorce Settlement</CardTitle>
-                    <CardDescription>Equitable Resolution</CardDescription>
+                    <CardTitle>Accordo di Divorzio con Patrimonio Elevato</CardTitle>
+                    <CardDescription>Risoluzione Equa</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p>
-                      We represented a client in a high-asset divorce involving complex business valuations 
-                      and property division. Through skilled negotiation, we secured an equitable settlement 
-                      without protracted litigation, preserving family relationships.
+                      Abbiamo rappresentato un cliente in un divorzio con patrimonio elevato che coinvolgeva complesse valutazioni 
+                      aziendali e divisione dei beni. Attraverso una negoziazione abile, abbiamo ottenuto un accordo equo 
+                      senza contenziosi prolungati, preservando i rapporti familiari.
                     </p>
                     <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Challenge:</span>
-                      <span className="text-right">Complex asset valuation and division</span>
+                      <span className="text-properzi-beige font-medium">Sfida:</span>
+                      <span className="text-right">Complessa valutazione e divisione dei beni</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Outcome:</span>
-                      <span className="text-right">Amicable settlement and preserved business interests</span>
+                      <span className="text-properzi-beige font-medium">Risultato:</span>
+                      <span className="text-right">Accordo amichevole e interessi aziendali preservati</span>
                     </div>
                   </CardContent>
                 </Card>
 
                 <Card className="border-properzi-beige/10">
                   <CardHeader>
-                    <CardTitle>International Child Custody</CardTitle>
-                    <CardDescription>Cross-Border Resolution</CardDescription>
+                    <CardTitle>Affidamento Internazionale di Minori</CardTitle>
+                    <CardDescription>Risoluzione Transfrontaliera</CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-4">
                     <p>
-                      Our family law team successfully resolved a complex international child custody dispute 
-                      involving Hague Convention provisions. We secured a favorable arrangement that prioritized 
-                      the child's well-being while protecting our client's parental rights.
+                      Il nostro team di diritto di famiglia ha risolto con successo una complessa controversia internazionale 
+                      sull'affidamento dei figli che coinvolgeva disposizioni della Convenzione dell'Aia. Abbiamo ottenuto un 
+                      accordo favorevole che ha dato priorità al benessere del bambino proteggendo i diritti genitoriali del nostro cliente.
                     </p>
                     <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Challenge:</span>
-                      <span className="text-right">Jurisdictional conflicts and international law</span>
+                      <span className="text-properzi-beige font-medium">Sfida:</span>
+                      <span className="text-right">Conflitti giurisdizionali e diritto internazionale</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-properzi-beige font-medium">Outcome:</span>
-                      <span className="text-right">Joint custody arrangement with clear visitation rights</span>
+                      <span className="text-properzi-beige font-medium">Risultato:</span>
+                      <span className="text-right">Accordo di affidamento congiunto con chiari diritti di visita</span>
                     </div>
                   </CardContent>
                 </Card>
@@ -212,10 +212,10 @@ const SuccessStories = () => {
       <section className="section-padding bg-properzi-navy/5">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto mb-12 text-center animate-slide-in">
-            <h2 className="text-3xl font-serif mb-4 text-properzi-navy">Life at Properzi Studio</h2>
+            <h2 className="text-3xl font-serif mb-4 text-properzi-navy">La Vita presso Properzi Studio</h2>
             <p className="text-properzi-navy/80">
-              Hear from our interns and team members about their experiences working at Properzi Studio Legale 
-              and how our collaborative environment nurtures legal talent.
+              Ascolta dai nostri tirocinanti e membri del team le loro esperienze lavorative presso Properzi Studio Legale 
+              e come il nostro ambiente collaborativo nutre il talento legale.
             </p>
           </div>
 
@@ -226,13 +226,13 @@ const SuccessStories = () => {
                   <span className="text-2xl font-serif text-properzi-beige">M</span>
                 </div>
                 <CardTitle>Michael Rodriguez</CardTitle>
-                <CardDescription>Summer Intern 2024</CardDescription>
+                <CardDescription>Tirocinante Estate 2024</CardDescription>
               </CardHeader>
               <CardContent>
                 <blockquote className="text-properzi-navy/80 italic">
-                  "My internship at Properzi Studio Legale was transformative. I had the opportunity to work 
-                  directly with senior attorneys on meaningful cases, receiving mentorship that went beyond 
-                  theoretical knowledge to practical application of the law."
+                  "Il mio tirocinio presso Properzi Studio Legale è stato trasformativo. Ho avuto l'opportunità di lavorare 
+                  direttamente con avvocati senior su casi significativi, ricevendo un mentoring che è andato oltre 
+                  la conoscenza teorica all'applicazione pratica della legge."
                 </blockquote>
               </CardContent>
             </Card>
@@ -243,13 +243,13 @@ const SuccessStories = () => {
                   <span className="text-2xl font-serif text-properzi-beige">S</span>
                 </div>
                 <CardTitle>Sarah Johnson</CardTitle>
-                <CardDescription>Legal Assistant to Associate</CardDescription>
+                <CardDescription>Da Assistente Legale ad Associata</CardDescription>
               </CardHeader>
               <CardContent>
                 <blockquote className="text-properzi-navy/80 italic">
-                  "What began as a summer position evolved into a fulfilling career. The partners recognized my 
-                  potential and supported my journey through law school. The professional development opportunities 
-                  here are unmatched, with clear pathways for growth."
+                  "Ciò che è iniziato come una posizione estiva si è evoluto in una carriera gratificante. I partner hanno riconosciuto 
+                  il mio potenziale e hanno supportato il mio percorso durante la facoltà di giurisprudenza. Le opportunità di 
+                  sviluppo professionale qui sono impareggiabili, con chiari percorsi di crescita."
                 </blockquote>
               </CardContent>
             </Card>
@@ -260,13 +260,13 @@ const SuccessStories = () => {
                   <span className="text-2xl font-serif text-properzi-beige">D</span>
                 </div>
                 <CardTitle>David Chen</CardTitle>
-                <CardDescription>Research Intern to Junior Associate</CardDescription>
+                <CardDescription>Da Tirocinante di Ricerca ad Associato Junior</CardDescription>
               </CardHeader>
               <CardContent>
                 <blockquote className="text-properzi-navy/80 italic">
-                  "The collaborative culture at Properzi Studio Legale sets it apart from other firms. Partners 
-                  are accessible mentors genuinely invested in your growth. The challenging work environment is 
-                  balanced with supportive colleagues who celebrate each other's successes."
+                  "La cultura collaborativa presso Properzi Studio Legale lo distingue da altri studi. I partner sono mentori 
+                  accessibili genuinamente investiti nella tua crescita. L'ambiente di lavoro stimolante è bilanciato da 
+                  colleghi di supporto che celebrano i successi reciproci."
                 </blockquote>
               </CardContent>
             </Card>
@@ -276,32 +276,32 @@ const SuccessStories = () => {
           <div className="bg-white p-8 rounded-lg shadow-md animate-slide-in">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
               <div>
-                <h3 className="text-2xl font-serif mb-4 text-properzi-navy">Join Our Team</h3>
+                <h3 className="text-2xl font-serif mb-4 text-properzi-navy">Unisciti al Nostro Team</h3>
                 <p className="mb-4 text-properzi-navy/80">
-                  We're always looking for talented individuals to join our firm. Whether you're a law student 
-                  seeking internship opportunities or an experienced professional looking for your next career move, 
-                  we'd love to hear from you.
+                  Siamo sempre alla ricerca di persone di talento da far entrare nel nostro studio. Che tu sia uno studente di giurisprudenza 
+                  in cerca di opportunità di tirocinio o un professionista esperto alla ricerca della tua prossima mossa di carriera, 
+                  ci piacerebbe sentirti.
                 </p>
                 <div className="space-y-4 mb-6">
                   <div className="flex items-start space-x-3">
                     <Award className="h-6 w-6 text-properzi-beige mt-1" />
                     <div>
-                      <h4 className="font-medium text-properzi-navy">Professional Development</h4>
-                      <p className="text-sm text-properzi-navy/70">Mentorship from industry leaders and continuous learning opportunities</p>
+                      <h4 className="font-medium text-properzi-navy">Sviluppo Professionale</h4>
+                      <p className="text-sm text-properzi-navy/70">Mentoring da parte di leader del settore e opportunità di apprendimento continuo</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Briefcase className="h-6 w-6 text-properzi-beige mt-1" />
                     <div>
-                      <h4 className="font-medium text-properzi-navy">Challenging Caseload</h4>
-                      <p className="text-sm text-properzi-navy/70">Work on diverse and complex legal matters across practice areas</p>
+                      <h4 className="font-medium text-properzi-navy">Casistica Stimolante</h4>
+                      <p className="text-sm text-properzi-navy/70">Lavoro su questioni legali diverse e complesse in varie aree di pratica</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Users className="h-6 w-6 text-properzi-beige mt-1" />
                     <div>
-                      <h4 className="font-medium text-properzi-navy">Collaborative Environment</h4>
-                      <p className="text-sm text-properzi-navy/70">Supportive team culture that values diverse perspectives</p>
+                      <h4 className="font-medium text-properzi-navy">Ambiente Collaborativo</h4>
+                      <p className="text-sm text-properzi-navy/70">Cultura di team che valorizza prospettive diverse</p>
                     </div>
                   </div>
                 </div>
@@ -311,7 +311,7 @@ const SuccessStories = () => {
                 <form onSubmit={handleCVSubmit} className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Full Name</Label>
+                      <Label htmlFor="name">Nome Completo</Label>
                       <Input id="name" required />
                     </div>
                     <div className="space-y-2">
@@ -321,25 +321,25 @@ const SuccessStories = () => {
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone</Label>
+                      <Label htmlFor="phone">Telefono</Label>
                       <Input id="phone" type="tel" />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="position">Position of Interest</Label>
+                      <Label htmlFor="position">Posizione di Interesse</Label>
                       <Input id="position" required />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="message">Cover Letter</Label>
-                    <Textarea id="message" rows={4} placeholder="Tell us about yourself and your interest in Properzi Studio Legale" required />
+                    <Label htmlFor="message">Lettera di Presentazione</Label>
+                    <Textarea id="message" rows={4} placeholder="Parlaci di te e del tuo interesse per Properzi Studio Legale" required />
                   </div>
                   <div className="space-y-2">
-                    <Label htmlFor="cv">Resume/CV</Label>
+                    <Label htmlFor="cv">Curriculum Vitae</Label>
                     <Input id="cv" type="file" accept=".pdf,.doc,.docx" required className="cursor-pointer" />
-                    <p className="text-xs text-properzi-navy/60 mt-1">Accepted formats: PDF, DOC, DOCX (Max 5MB)</p>
+                    <p className="text-xs text-properzi-navy/60 mt-1">Formati accettati: PDF, DOC, DOCX (Max 5MB)</p>
                   </div>
                   <Button type="submit" className="w-full bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors">
-                    Submit Application
+                    Invia Candidatura
                   </Button>
                 </form>
               </div>

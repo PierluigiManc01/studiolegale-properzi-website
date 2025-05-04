@@ -60,16 +60,16 @@ const Navbar = () => {
             to="/success-stories"
             className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors"
           >
-            Success Stories
+            Casi di Successo
           </Link>
           <Link
             to="/contact"
             className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors"
           >
-            Contact Us
+            Contatti
           </Link>
           <Button className="bg-properzi-beige hover:bg-properzi-navy text-properzi-navy hover:text-properzi-beige transition-colors">
-            <a href="tel:+123456789">Book Consultation</a>
+            <a href="tel:+123456789">Prenota Consulenza</a>
           </Button>
         </div>
 
@@ -102,17 +102,17 @@ const Navbar = () => {
               className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors py-2"
               onClick={closeMobileMenu}
             >
-              Success Stories
+              Casi di Successo
             </Link>
             <Link
               to="/contact"
               className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors py-2"
               onClick={closeMobileMenu}
             >
-              Contact Us
+              Contatti
             </Link>
             <Button className="bg-properzi-beige hover:bg-properzi-navy text-properzi-navy hover:text-properzi-beige transition-colors w-full">
-              <a href="tel:+123456789">Book Consultation</a>
+              <a href="tel:+123456789">Prenota Consulenza</a>
             </Button>
           </div>
         </div>

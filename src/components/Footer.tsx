@@ -16,13 +16,13 @@ const Footer = () => {
               className="h-16 mb-4 bg-white p-2 rounded"
             />
             <p className="text-sm mt-4 text-properzi-beige/90">
-              Properzi Studio Legale provides expert legal services with a commitment
-              to excellence, integrity, and client satisfaction.
+              Properzi Studio Legale offre servizi legali esperti con un impegno
+              per l'eccellenza, l'integrità e la soddisfazione del cliente.
             </p>
           </div>
 
           <div>
-            <h3 className="font-serif text-xl mb-4 text-properzi-beige">Quick Links</h3>
+            <h3 className="font-serif text-xl mb-4 text-properzi-beige">Link Rapidi</h3>
             <ul className="space-y-2">
               <li>
                 <Link to="/" className="hover:text-properzi-beige transition-colors">
@@ -31,19 +31,19 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/success-stories" className="hover:text-properzi-beige transition-colors">
-                  Success Stories
+                  Casi di Successo
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="hover:text-properzi-beige transition-colors">
-                  Contact Us
+                  Contatti
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="font-serif text-xl mb-4 text-properzi-beige">Contact Information</h3>
+            <h3 className="font-serif text-xl mb-4 text-properzi-beige">Informazioni di Contatto</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Phone size={18} className="mr-2 mt-1 text-properzi-beige" />
@@ -64,14 +64,14 @@ const Footer = () => {
         <div className="border-t border-white/10 pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-white/70">
-              © {currentYear} Properzi Studio Legale. All rights reserved.
+              © {currentYear} Properzi Studio Legale. Tutti i diritti riservati.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
               <a href="#" className="text-white hover:text-properzi-beige transition-colors">
-                Privacy Policy
+                Informativa sulla Privacy
               </a>
               <a href="#" className="text-white hover:text-properzi-beige transition-colors">
-                Terms of Service
+                Termini di Servizio
               </a>
             </div>
           </div>
