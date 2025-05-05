@@ -59,14 +59,14 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7" className="flex items-start space-x-4">
+                <div className="flex items-start space-x-4">
                   <div className="h-12 w-12 rounded-full bg-properzi-navy flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-white" />
                   </div>
                   <div>
                     <h3 className="font-medium text-lg text-properzi-navy mb-1">Sede dello Studio</h3>
                     <p className="text-properzi-navy/70 mb-1">Vieni a trovarci:</p>
-                    <address className="not-italic text-properzi-navy">
+                    <address href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7" className="not-italic text-properzi-navy">
                       Piazzale Benito Juarez 10/11<br />
                       Roma, RM 00144<br />
                       Italia

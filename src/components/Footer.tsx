@@ -46,15 +46,15 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Phone size={18} className="mr-2 mt-1 text-properzi-beige" />
-                <span>+(39) 3357252561</span>
+                <span href="+393357252561">+(39) 3357252561</span>
               </li>
               <li className="flex items-start">
                 <Mail size={18} className="mr-2 mt-1 text-properzi-beige" />
-                <span>vanessa.properzi@libero.it</span>
+                <span href="vanessa.properzi@libero.it">vanessa.properzi@libero.it</span>
               </li>
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-properzi-beige" />
-                <span>Piazzale Benito Juarez 10/11<br />Roma, RM 00144</span>
+                <span href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7">Piazzale Benito Juarez 10/11<br />Roma, RM 00144</span>
               </li>
             </ul>
           </div>
