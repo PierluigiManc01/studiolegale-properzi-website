@@ -165,11 +165,11 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-lg text-properzi-navy mb-1">Indirizzo</h3>
-                    <address className="not-italic text-properzi-navy/70">
+                    <a href="href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7" className="not-italic text-properzi-navy/70">
                       Piazzale Benito Juarez 10/11<br />
                       Roma, RM 00144<br />
                       Italia
-                    </address>
+                    </a>
                   </div>
                 </div>
               </div>
