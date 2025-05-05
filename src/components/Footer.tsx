@@ -46,15 +46,21 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Phone size={18} className="mr-2 mt-1 text-properzi-beige" />
-                <span href="+393357252561">+(39) 3357252561</span>
+                <a href="tel:+393357252561" className="text-properzi-beige hover:text-properzi-navy transition-colors">
+                  <span >+39 3357252561</span>
+                </a>
               </li>
               <li className="flex items-start">
                 <Mail size={18} className="mr-2 mt-1 text-properzi-beige" />
-                <span href="vanessa.properzi@libero.it">vanessa.properzi@libero.it</span>
+                <a href="mailto:vanessa.properzi@libero.it" className="text-properzi-beige hover:text-properzi-navy transition-colors">
+                  <span>vanessa.properzi@libero.it</span>
+                </a>
               </li>
               <li className="flex items-start">
                 <MapPin size={18} className="mr-2 mt-1 text-properzi-beige" />
-                <span href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7">Piazzale Benito Juarez 10/11<br />Roma, RM 00144</span>
+                < a href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7" className="text-properzi-beige hover:text-properzi-navy transition-colors">
+                  <span >Piazzale Benito Juarez 10/11<br />Roma, RM 00144</span>
+                </a>
               </li>
             </ul>
           </div>
