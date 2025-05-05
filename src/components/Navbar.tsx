@@ -69,7 +69,7 @@ const Navbar = () => {
             Contatti
           </Link>
           <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors uppercase text-xs tracking-wider">
-            <a href="tel:+123456789">Prenota Consulenza</a>
+            <a href="#contact">Prenota Consulenza</a>
           </Button>
         </div>
 

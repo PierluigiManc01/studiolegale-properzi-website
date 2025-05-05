@@ -141,8 +141,8 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-lg text-properzi-navy mb-1">Telefono</h3>
-                    <a href="tel:+15551234567" className="text-properzi-navy/70 hover:text-properzi-beige transition-colors">
-                      +1 (555) 123-4567
+                    <a href="tel:+393357252561" className="text-properzi-navy/70 hover:text-properzi-beige transition-colors">
+                      +393357252561
                     </a>
                   </div>
                 </div>
@@ -153,22 +153,22 @@ const Home = () => {
                   </div>
                   <div>
                     <h3 className="font-medium text-lg text-properzi-navy mb-1">Email</h3>
-                    <a href="mailto:info@properzistudio.com" className="text-properzi-navy/70 hover:text-properzi-beige transition-colors">
-                      info@properzistudio.com
+                    <a href="mailto:vanessa.properzi@libero.it" className="text-properzi-navy/70 hover:text-properzi-beige transition-colors">
+                    vanessa.properzi@libero.it
                     </a>
                   </div>
                 </div>
                 
-                <div className="flex items-start space-x-4">
+                <div href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7" className="flex items-start space-x-4">
                   <div className="h-10 w-10 rounded-full bg-properzi-navy flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <h3 className="font-medium text-lg text-properzi-navy mb-1">Indirizzo</h3>
                     <address className="not-italic text-properzi-navy/70">
-                      123 Legal Avenue, Suite 500<br />
-                      New York, NY 10001<br />
-                      Stati Uniti
+                      Piazzale Benito Juarez 10/11<br />
+                      Roma, RM 00144<br />
+                      Italia
                     </address>
                   </div>
                 </div>
