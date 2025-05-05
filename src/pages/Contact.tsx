@@ -66,7 +66,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-lg text-properzi-navy mb-1">Sede dello Studio</h3>
                     <p className="text-properzi-navy/70 mb-1">Vieni a trovarci:</p>
-                    <a href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7" target="_blank" rel="noopener noreferrer" class="not-italic text-properzi-navy">
+                    <a href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7" target="_blank" rel="noopener noreferrer" className="text-properzi-beige hover:text-properzi-navy font-medium transition-colors">
                       Piazzale Benito Juarez 10/11<br />
                       Roma, RM 00144<br />
                       Italia
