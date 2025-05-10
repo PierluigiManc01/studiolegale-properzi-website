@@ -11,9 +11,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <img
-              src="/lovable-uploads/34c2cf6e-cb1d-429d-8b66-846d63dc0d61.png"
+              src="/photos/logo.png"
               alt="Properzi Studio Legale"
-              className="h-16 mb-4 bg-white p-2 rounded"
+              className="h-16 md:h-20 mb-4 bg-white p-2 rounded"
             />
             <p className="text-sm mt-4 text-properzi-beige/90">
               Properzi Studio Legale offre servizi legali con eccellenza ed integrità, al servizio del cliente.
