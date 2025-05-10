@@ -9,7 +9,7 @@ const Home = () => {
     <>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center bg-properzi-navy/5 pt-20 banner-clip overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/photos/cover.jpeg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/photos/cover.jpeg')] bg-cover bg-center brightness-60"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6 text-properzi-navy">
