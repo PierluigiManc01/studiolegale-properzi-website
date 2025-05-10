@@ -9,7 +9,7 @@ const Home = () => {
     <>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center bg-properzi-navy/5 pt-20 banner-clip overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/photos/cover.jpeg')] bg-cover bg-center brightness-60 opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/photos/cover.jpeg')] bg-cover bg-center brightness-60 opacity-10"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6 text-properzi-navy">
@@ -19,7 +19,7 @@ const Home = () => {
               Competenza ed esperienza al servizio della giustizia
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors py-6 px-8">
+              <Button asChild className="bg-properzi-beige hover:bg-properzi-navy text-properzi-navy hover:text-white transition-colors py-6 px-8">
                 <Link to="/contact">Consulenza Legale</Link>
               </Button>
             </div>
