@@ -36,7 +36,7 @@ const Navbar = () => {
     <nav
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300",
-        isScrolled ? "bg-properzi-beige shadow-md py-3" : "bg-properzi-beige shadow-md py-5"
+        isScrolled ? "bg-properzi-beige shadow-md py-3" : "bg-properzi-beige shadow-md py-3"
       )}
     >
       <div className="container-custom flex items-center justify-between">
@@ -44,7 +44,7 @@ const Navbar = () => {
           <img
             src="/photos/logo.png"
             alt="Properzi Studio Legale"
-            className="h-16 md:h-12"
+            className="h-16 md:h-20"
           />
         </Link>
 
