@@ -40,14 +40,13 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
           <div>
             <h3 className="font-cinzel text-xl mb-4 text-properzi-beige">Informazioni di Contatto</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Phone size={18} className="mr-2 mt-1 text-properzi-beige" />
-                <a href="tel:+393357252561" className="text-white hover:text-properzi-beige transition-colors">
-                  <span >+39 3357252561</span>
+                <a href="tel:+0645435416" className="text-white hover:text-properzi-beige transition-colors">
+                  <span >+0645435416</span>
                 </a>
               </li>
               <li className="flex items-start">

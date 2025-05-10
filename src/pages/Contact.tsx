@@ -40,8 +40,8 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium text-lg text-properzi-navy mb-1">Telefono</h3>
                     <p className="text-properzi-navy/70 mb-1">Chiamaci direttamente:</p>
-                    <a href="tel:+393357252561" className="text-properzi-beige hover:text-properzi-navy font-medium transition-colors">
-                      +39 3357252561
+                    <a href="tel:+0645435416" className="text-properzi-beige hover:text-properzi-navy font-medium transition-colors">
+                      +0645435416
                     </a>
                   </div>
                 </div>
@@ -99,15 +99,23 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      {/* Map Section */}
-      <section className="py-10">
-        <div className="container-custom">
-          <div className="h-80 w-full bg-properzi-navy/10 flex items-center justify-center">
-            <p className="text-properzi-navy font-medium">Mappa dello Studio (Google Maps)</p>
-          </div>
+    {/* Map Section */}
+    <section className="py-10">
+      <div className="container-custom">
+        <div className="w-full h-[400px] rounded-lg overflow-hidden shadow-md">
+          <iframe
+            title="Studio Legale Properzi Indirizzo"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.5812076288743!2d12.4662!3d41.8296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13258a5a1b93b46f%3A0x3f570dd94ddfd0ad!2sPiazzale%20Benito%20Juarez%2C%2010%2F11%2C%2000144%20Roma%20RM%2C%20Italy!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }} 
+            allowFullScreen={true} 
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </div>
-      </section>
+      </div>
+    </section>
     </div>
   );
 };
