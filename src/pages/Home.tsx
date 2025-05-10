@@ -9,7 +9,7 @@ const Home = () => {
     <>
       {/* Hero Section */}
       <section className="relative h-screen flex items-center bg-properzi-navy/5 pt-20 banner-clip overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/photos/hero.png')] bg-cover bg-center"></div>
+        <div className="absolute inset-0 bg-[url('/photos/hero.png')] bg-cover bg-center opacity-70"></div>
         <div className="container-custom relative z-10">
           <div className="ml-auto max-w-2xl text-right"> 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6 text-properzi-navy">
@@ -18,8 +18,8 @@ const Home = () => {
             <p className="text-lg md:text-xl mb-8 text-properzi-navy/90">
               Competenza ed esperienza al servizio della giustizia
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4"> {/* Changed to justify-end */}
-              <Button asChild className="bg-properzi-beige hover:bg-properzi-navy text-properzi-navy hover:text-white transition-colors py-6 px-8">
+            <div className="flex flex-col sm:flex-row justify-end gap-2"> 
+              <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors py-6 px-8">
                 <Link to="/contact">Consulenza Legale</Link>
               </Button>
             </div>
