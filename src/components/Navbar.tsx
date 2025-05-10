@@ -44,7 +44,7 @@ const Navbar = () => {
           <img
             src="/photos/logo.png"
             alt="Properzi Studio Legale"
-            className="h-20 md:h-30"
+            className="h-30 md:h-30"
           />
         </Link>
 
