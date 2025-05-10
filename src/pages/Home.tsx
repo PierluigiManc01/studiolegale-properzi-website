@@ -43,16 +43,26 @@ const Home = () => {
           </div>          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="text-center p-6 bg-properzi-navy/5 rounded-lg">
-              <div className="text-3xl md:text-4xl font-bold text-properzi-beige mb-2">500+</div>
-              <p className="text-properzi-navy font-medium">Casi Risolti</p>
+            <div className="flex items-center justify-center">
+                <img 
+                  src="/photos/avvocati-logo-4.png" 
+                  alt="Corte Suprema di Cassazione Logo" 
+                  className="max-h-24 mx-auto"
+                />
+              </div>
             </div>
             <div className="text-center p-6 bg-properzi-navy/5 rounded-lg">
               <div className="text-3xl md:text-4xl font-bold text-properzi-beige mb-2">25+</div>
               <p className="text-properzi-navy font-medium">Anni di Esperienza</p>
             </div>
             <div className="text-center p-6 bg-properzi-navy/5 rounded-lg">
-              <div className="text-3xl md:text-4xl font-bold text-properzi-beige mb-2">98%</div>
-              <p className="text-properzi-navy font-medium">Clienti Soddisfatti</p>
+              <div className="flex items-center justify-center">
+                <img 
+                  src="/photos/logo_CorteSupremaCassazione.png" 
+                  alt="Corte Suprema di Cassazione Logo" 
+                  className="max-h-24 mx-auto"
+                />
+              </div>
             </div>
           </div>
         </div>
