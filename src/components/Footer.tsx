@@ -13,7 +13,7 @@ const Footer = () => {
             <img
               src="/photos/logo.png"
               alt="Properzi Studio Legale"
-              className="h-16 md:h-20 mb-4 bg-white p-2 rounded"
+              className="h-20 md:h-30"
             />
             <p className="text-sm mt-4 text-properzi-beige/90">
               Properzi Studio Legale offre servizi legali con eccellenza ed integrità, al servizio del cliente.
