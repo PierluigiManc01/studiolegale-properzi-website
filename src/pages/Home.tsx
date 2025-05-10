@@ -12,10 +12,10 @@ const Home = () => {
         <div className="absolute inset-0 bg-[url('/photos/cover.jpeg')] bg-cover bg-center brightness-80 opacity-60"></div>
         <div className="container-custom relative z-10">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6 text-properzi-navy mb-4 bg-properzi-beige/90 p-2 rounded ">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6 text-properzi-beige">
               Properzi <br/> Studio Legale
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-properzi-navy/90">
+            <p className="text-lg md:text-xl mb-8 text-properzi-navy/90 bg-properzi-beige/90 rounded">
               Competenza ed esperienza al servizio della giustizia
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
