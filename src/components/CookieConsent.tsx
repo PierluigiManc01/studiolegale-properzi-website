@@ -63,7 +63,7 @@ const CookieConsent: React.FC = () => {
             Accept Necessary Cookies
           </Button>
           <Button 
-            className="bg-properzi-beige hover:bg-properzy-navy text-properzi-navy hover:text-white w-full sm:w-auto"
+            className="bg-properzi-beige hover:bg-properzi-navy text-properzi-navy hover:text-white w-full sm:w-auto"
             onClick={handleAcceptAll}
           >
             Accept All Cookies
