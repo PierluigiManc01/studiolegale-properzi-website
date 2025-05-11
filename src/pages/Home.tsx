@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id='home' className="relative h-[50vh] md:h-[70vh] flex items-center bg-properzi-navy/5 pt-20 banner-clip overflow-hidden">
+      <section id='home' className="relative h-[30vh] md:h-[70vh] flex items-center bg-properzi-navy/5 pt-20 banner-clip overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/photos/hero.png" 
