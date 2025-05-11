@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div className="pt-24">
       {/* Hero Section */}
-      <section className="bg-properzi-navy text-white py-18 pt-20 banner-clip overflow-hidden">
+      <section className="bg-properzi-navy text-white py-10 pt-20 banner-clip overflow-hidden">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center animate-fade-in">
             <h1 className="page-title text-white">
