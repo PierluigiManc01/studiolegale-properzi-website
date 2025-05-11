@@ -213,45 +213,315 @@ const Home = () => {
               );
             })()}
             {/*Diritto di Famiglia*/}
-            <div className="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto di Famiglia</h3>
-              <p className="text-properzi-navy/80 mb-4">Separazioni, divorzi, affidamento minori e tutela dei minori.</p>
-              <Link to="/contact" className="text-properzi-beige hover:text-properzi-navy transition-colors flex items-center gap-1 font-medium">
-                Maggiori informazioni <ArrowRight size={16} />
-              </Link>
-            </div>
+            {(() => {
+              const [isFlipped, setIsFlipped] = useState(false);
+              
+              return (
+                <div 
+                  className="bg-white rounded shadow-sm hover:shadow-md transition-shadow relative h-[250px]"
+                  style={{ perspective: "1000px" }}
+                >
+                  <div 
+                    className="w-full h-full transition-all duration-500 absolute"
+                    style={{ 
+                      transformStyle: "preserve-3d", 
+                      transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)"
+                    }}
+                  >
+                    {/* Front Side */}
+                    <div 
+                      className="absolute w-full h-full p-6 flex flex-col justify-between"
+                      style={{ backfaceVisibility: "hidden" }}
+                    >
+                      <div>
+                        <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto di Famiglia</h3>
+                        <p className="text-properzi-navy/80 mb-4">Separazioni, divorzi, affidamento minori e tutela dei minori.</p>
+                      </div>
+                      <button 
+                        onClick={() => setIsFlipped(true)}
+                        className="text-properzi-beige hover:text-properzi-navy transition-colors flex items-center gap-1 font-medium"
+                      >
+                        Maggiori informazioni <ArrowRight size={16} />
+                      </button>
+                    </div>
+                    
+                    {/* Back Side */}
+                    <div 
+                      className="absolute w-full h-full p-6 bg-properzi-navy text-white flex flex-col justify-between"
+                      style={{ 
+                        backfaceVisibility: "hidden",
+                        transform: "rotateY(180deg)"
+                      }}
+                    >
+                      <div>
+                        <h3 className="text-xl font-cinzel font-medium mb-3">Diritto di Famiglia</h3>
+                        <p className="mb-2">La nostra consulenza include:</p>
+                        <ul className="list-disc pl-5 text-sm mb-4">
+                          <li>Controversie contrattuali</li>
+                          <li>Responsabilità civile</li>
+                          <li>Risarcimento danni</li>
+                          <li>Tutela della proprietà</li>
+                        </ul>
+                      </div>
+                      <button 
+                        onClick={() => setIsFlipped(false)}
+                        className="text-properzi-beige hover:text-white transition-colors flex items-center gap-1 font-medium"
+                      >
+                        <ArrowRight size={16} className="transform rotate-180 mr-1" /> Torna indietro
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
             {/*Diritto Immobiliare*/}
-            <div className="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto Immobiliare</h3>
-              <p className="text-properzi-navy/80 mb-4">Compravendite, locazioni, condomini, diritti reali e controversie immobiliari.</p>
-              <Link to="/contact" className="text-properzi-beige hover:text-properzi-navy transition-colors flex items-center gap-1 font-medium">
-                Maggiori informazioni <ArrowRight size={16} />
-              </Link>
-            </div>
+            {(() => {
+              const [isFlipped, setIsFlipped] = useState(false);
+              
+              return (
+                <div 
+                  className="bg-white rounded shadow-sm hover:shadow-md transition-shadow relative h-[250px]"
+                  style={{ perspective: "1000px" }}
+                >
+                  <div 
+                    className="w-full h-full transition-all duration-500 absolute"
+                    style={{ 
+                      transformStyle: "preserve-3d", 
+                      transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)"
+                    }}
+                  >
+                    {/* Front Side */}
+                    <div 
+                      className="absolute w-full h-full p-6 flex flex-col justify-between"
+                      style={{ backfaceVisibility: "hidden" }}
+                    >
+                      <div>
+                        <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto Immobiliare</h3>
+                        <p className="text-properzi-navy/80 mb-4">Compravendite, locazioni, condomini, diritti reali e controversie immobiliari.</p>
+                      </div>
+                      <button 
+                        onClick={() => setIsFlipped(true)}
+                        className="text-properzi-beige hover:text-properzi-navy transition-colors flex items-center gap-1 font-medium"
+                      >
+                        Maggiori informazioni <ArrowRight size={16} />
+                      </button>
+                    </div>
+                    
+                    {/* Back Side */}
+                    <div 
+                      className="absolute w-full h-full p-6 bg-properzi-navy text-white flex flex-col justify-between"
+                      style={{ 
+                        backfaceVisibility: "hidden",
+                        transform: "rotateY(180deg)"
+                      }}
+                    >
+                      <div>
+                        <h3 className="text-xl font-cinzel font-medium mb-3">Diritto Immobiliare</h3>
+                        <p className="mb-2">La nostra consulenza include:</p>
+                        <ul className="list-disc pl-5 text-sm mb-4">
+                          <li>Controversie contrattuali</li>
+                          <li>Responsabilità civile</li>
+                          <li>Risarcimento danni</li>
+                          <li>Tutela della proprietà</li>
+                        </ul>
+                      </div>
+                      <button 
+                        onClick={() => setIsFlipped(false)}
+                        className="text-properzi-beige hover:text-white transition-colors flex items-center gap-1 font-medium"
+                      >
+                        <ArrowRight size={16} className="transform rotate-180 mr-1" /> Torna indietro
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
             {/*Diritto Penale*/}
-            <div className="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto Penale</h3>
-              <p className="text-properzi-navy/80 mb-4">In partnership con l’avv. Alessandra Poma<br/>Difesa in procedimenti penali, consulenza preventiva e tutela legale completa.</p>
-              <Link to="/contact" className="text-properzi-beige hover:text-properzi-navy transition-colors flex items-center gap-1 font-medium">
-                Maggiori informazioni <ArrowRight size={16} />
-              </Link>
-            </div>
+            {(() => {
+              const [isFlipped, setIsFlipped] = useState(false);
+              
+              return (
+                <div 
+                  className="bg-white rounded shadow-sm hover:shadow-md transition-shadow relative h-[250px]"
+                  style={{ perspective: "1000px" }}
+                >
+                  <div 
+                    className="w-full h-full transition-all duration-500 absolute"
+                    style={{ 
+                      transformStyle: "preserve-3d", 
+                      transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)"
+                    }}
+                  >
+                    {/* Front Side */}
+                    <div 
+                      className="absolute w-full h-full p-6 flex flex-col justify-between"
+                      style={{ backfaceVisibility: "hidden" }}
+                    >
+                      <div>
+                        <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto Penale</h3>
+                        <p className="text-properzi-navy/80 mb-4">In partnership con l’avv. Alessandra Poma<br/>Difesa in procedimenti penali, consulenza preventiva e tutela legale completa.</p>
+                      </div>
+                      <button 
+                        onClick={() => setIsFlipped(true)}
+                        className="text-properzi-beige hover:text-properzi-navy transition-colors flex items-center gap-1 font-medium"
+                      >
+                        Maggiori informazioni <ArrowRight size={16} />
+                      </button>
+                    </div>
+                    
+                    {/* Back Side */}
+                    <div 
+                      className="absolute w-full h-full p-6 bg-properzi-navy text-white flex flex-col justify-between"
+                      style={{ 
+                        backfaceVisibility: "hidden",
+                        transform: "rotateY(180deg)"
+                      }}
+                    >
+                      <div>
+                        <h3 className="text-xl font-cinzel font-medium mb-3">Diritto Penale</h3>
+                        <p className="mb-2">La nostra consulenza include:</p>
+                        <ul className="list-disc pl-5 text-sm mb-4">
+                          <li>Controversie contrattuali</li>
+                          <li>Responsabilità civile</li>
+                          <li>Risarcimento danni</li>
+                          <li>Tutela della proprietà</li>
+                        </ul>
+                      </div>
+                      <button 
+                        onClick={() => setIsFlipped(false)}
+                        className="text-properzi-beige hover:text-white transition-colors flex items-center gap-1 font-medium"
+                      >
+                        <ArrowRight size={16} className="transform rotate-180 mr-1" /> Torna indietro
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
             {/*Diritto del Lavoro*/}
-            <div className="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto del Lavoro</h3>
-              <p className="text-properzi-navy/80 mb-4">Contratti di lavoro, licenziamenti, controversie lavorative e previdenza sociale.</p>
-              <Link to="/contact" className="text-properzi-beige hover:text-properzi-navy transition-colors flex items-center gap-1 font-medium">
-                Maggiori informazioni <ArrowRight size={16} />
-              </Link>
-            </div>
+            {(() => {
+              const [isFlipped, setIsFlipped] = useState(false);
+              
+              return (
+                <div 
+                  className="bg-white rounded shadow-sm hover:shadow-md transition-shadow relative h-[250px]"
+                  style={{ perspective: "1000px" }}
+                >
+                  <div 
+                    className="w-full h-full transition-all duration-500 absolute"
+                    style={{ 
+                      transformStyle: "preserve-3d", 
+                      transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)"
+                    }}
+                  >
+                    {/* Front Side */}
+                    <div 
+                      className="absolute w-full h-full p-6 flex flex-col justify-between"
+                      style={{ backfaceVisibility: "hidden" }}
+                    >
+                      <div>
+                        <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto del Lavoro</h3>
+                        <p className="text-properzi-navy/80 mb-4">Contratti di lavoro, licenziamenti, controversie lavorative e previdenza sociale.</p>
+                      </div>
+                      <button 
+                        onClick={() => setIsFlipped(true)}
+                        className="text-properzi-beige hover:text-properzi-navy transition-colors flex items-center gap-1 font-medium"
+                      >
+                        Maggiori informazioni <ArrowRight size={16} />
+                      </button>
+                    </div>
+                    
+                    {/* Back Side */}
+                    <div 
+                      className="absolute w-full h-full p-6 bg-properzi-navy text-white flex flex-col justify-between"
+                      style={{ 
+                        backfaceVisibility: "hidden",
+                        transform: "rotateY(180deg)"
+                      }}
+                    >
+                      <div>
+                        <h3 className="text-xl font-cinzel font-medium mb-3">Diritto del Lavoro</h3>
+                        <p className="mb-2">La nostra consulenza include:</p>
+                        <ul className="list-disc pl-5 text-sm mb-4">
+                          <li>Controversie contrattuali</li>
+                          <li>Responsabilità civile</li>
+                          <li>Risarcimento danni</li>
+                          <li>Tutela della proprietà</li>
+                        </ul>
+                      </div>
+                      <button 
+                        onClick={() => setIsFlipped(false)}
+                        className="text-properzi-beige hover:text-white transition-colors flex items-center gap-1 font-medium"
+                      >
+                        <ArrowRight size={16} className="transform rotate-180 mr-1" /> Torna indietro
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
             {/*Successioni*/}
-            <div className="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Successioni</h3>
-              <p className="text-properzi-navy/80 mb-4">Costituzione società, fusioni, acquisizioni, corporate governance e consulenza aziendale.</p>
-              <Link to="/contact" className="text-properzi-beige hover:text-properzi-navy transition-colors flex items-center gap-1 font-medium">
-                Maggiori informazioni <ArrowRight size={16} />
-              </Link>
-            </div>
+            {(() => {
+              const [isFlipped, setIsFlipped] = useState(false);
+              
+              return (
+                <div 
+                  className="bg-white rounded shadow-sm hover:shadow-md transition-shadow relative h-[250px]"
+                  style={{ perspective: "1000px" }}
+                >
+                  <div 
+                    className="w-full h-full transition-all duration-500 absolute"
+                    style={{ 
+                      transformStyle: "preserve-3d", 
+                      transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)"
+                    }}
+                  >
+                    {/* Front Side */}
+                    <div 
+                      className="absolute w-full h-full p-6 flex flex-col justify-between"
+                      style={{ backfaceVisibility: "hidden" }}
+                    >
+                      <div>
+                        <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Successioni</h3>
+                        <p className="text-properzi-navy/80 mb-4">Costituzione società, fusioni, acquisizioni, corporate governance e consulenza aziendale.</p>
+                      </div>
+                      <button 
+                        onClick={() => setIsFlipped(true)}
+                        className="text-properzi-beige hover:text-properzi-navy transition-colors flex items-center gap-1 font-medium"
+                      >
+                        Maggiori informazioni <ArrowRight size={16} />
+                      </button>
+                    </div>
+                    
+                    {/* Back Side */}
+                    <div 
+                      className="absolute w-full h-full p-6 bg-properzi-navy text-white flex flex-col justify-between"
+                      style={{ 
+                        backfaceVisibility: "hidden",
+                        transform: "rotateY(180deg)"
+                      }}
+                    >
+                      <div>
+                        <h3 className="text-xl font-cinzel font-medium mb-3">Successioni</h3>
+                        <p className="mb-2">La nostra consulenza include:</p>
+                        <ul className="list-disc pl-5 text-sm mb-4">
+                          <li>Controversie contrattuali</li>
+                          <li>Responsabilità civile</li>
+                          <li>Risarcimento danni</li>
+                          <li>Tutela della proprietà</li>
+                        </ul>
+                      </div>
+                      <button 
+                        onClick={() => setIsFlipped(false)}
+                        className="text-properzi-beige hover:text-white transition-colors flex items-center gap-1 font-medium"
+                      >
+                        <ArrowRight size={16} className="transform rotate-180 mr-1" /> Torna indietro
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
           </div>
         </div>
       </section>
