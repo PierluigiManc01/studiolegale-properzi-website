@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import Home from "./pages/Home";
 import SuccessStories from "./pages/SuccessStories";
 import Contact from "./pages/Contact";
+import CookieConsent from "./components/CookieConsent";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
           </Routes>
         </main>
         <Footer />
+        <CookieConsent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
