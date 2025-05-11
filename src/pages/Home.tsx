@@ -8,18 +8,18 @@ import { useState } from "react";
 const Home = () => {
   return (
     <>
-      <section className="relative h-[70vh] flex items-center bg-properzi-navy/5 pt-20 banner-clip overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/photos/hero.png')] bg-cover bg-center opacity-50"></div>
+      <section className="relative h-[50vh] md:h-[70vh] flex items-center bg-properzi-navy/5 pt-20 banner-clip overflow-hidden">
+        <div className="relative w-full h-full bg-[url('/photos/hero.png')] bg-cover bg-center sm:bg-right md:bg-center opacity-50"></div>
         <div className="container-custom relative z-10">
-          <div className="ml-auto max-w-2xl text-right"> 
+          <div className="ml-auto max-w-2xl text-center md:text-right"> 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6 text-properzi-navy">
               Properzi Studio Legale
             </h1>
             <p className="text-lg md:text-xl mb-8 text-properzi-navy/90">
               Competenza ed esperienza al servizio della giustizia
             </p>
-            <div className="flex flex-col sm:flex-row justify-end gap-2"> 
-              <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors py-6 px-8">
+            <div className="flex flex-col sm:flex-row justify-center md:justify-end gap-2"> 
+              <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors py-4 md:py-6 px-6 md:px-8">
                 <Link to="/contact">Consulenza Legale</Link>
               </Button>
             </div>
