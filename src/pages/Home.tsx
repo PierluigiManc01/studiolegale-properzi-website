@@ -8,8 +8,16 @@ import { useState } from "react";
 const Home = () => {
   return (
     <>
-      <section className="relative h-[50vh] md:h-[70vh] flex items-center bg-properzi-navy/5 pt-20 banner-clip overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/photos/hero.png')] bg-cover bg-[position:85%_center] md:bg-center opacity-50"></div>
+      {/* Hero Section */}
+      <section id='home' className="relative h-[50vh] md:h-[70vh] flex items-center bg-properzi-navy/5 pt-20 banner-clip overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src="/photos/hero.png" 
+            alt="Hero Background" 
+            className="w-full h-full object-cover brightness-60"
+            style={{ filter: 'opacity(0.5)' }}
+          />
+        </div>
         <div className="container-custom relative z-10">
           <div className="ml-auto max-w-2xl text-center md:text-right"> 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6 text-properzi-navy">
