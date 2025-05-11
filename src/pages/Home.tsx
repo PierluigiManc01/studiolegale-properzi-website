@@ -26,7 +26,7 @@ const Home = () => {
             <p className="text-base md:text-xl mb-8 text-properzi-navy/90">
               Competenza ed esperienza al servizio della giustizia
             </p>
-            <div className="flex flex-col sm:flex-row justify-center md:justify-end gap-2"> 
+            <div className="flex flex-col justify-center md:justify-end gap-2"> 
               <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors py-4 md:py-6 px-6 md:px-8">
                 <Link to="/contact">Consulenza Legale</Link>
               </Button>
