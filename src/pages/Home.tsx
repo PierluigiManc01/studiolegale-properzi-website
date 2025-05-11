@@ -81,14 +81,14 @@ const Home = () => {
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
           <div className="aspect-square overflow-hidden">
             <img 
-              src="/photos/cover.jpeg" 
+              src="/photos/vanessa.jpeg" 
               alt="Nome Avvocato" 
               className="w-full h-full object-cover"
             />
           </div>
           <div className="p-4 text-center">
-            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Nome Cognome</h3>
-            <p className="text-properzi-beige">Avvocato</p>
+            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Vanessa Properzi</h3>
+            <p className="text-properzi-beige">Avvocato Civilista</p>
           </div>
               </div>
               
@@ -102,8 +102,8 @@ const Home = () => {
             />
           </div>
           <div className="p-4 text-center">
-            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Nome Cognome</h3>
-            <p className="text-properzi-beige">Avvocato</p>
+            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Martina Cacciapuoti</h3>
+            <p className="text-properzi-beige">Dott.ssa Praticante</p>
           </div>
               </div>
               
@@ -116,11 +116,25 @@ const Home = () => {
             />
           </div>
           <div className="p-4 text-center">
-            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Nome Cognome</h3>
-            <p className="text-properzi-beige">Avvocato</p>
+            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Alessandra Poma</h3>
+            <p className="text-properzi-beige">Avvocato Penalista</p>
           </div>
               </div>
-              
+            
+              <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div className="aspect-square overflow-hidden">
+            <img 
+              src="/photos/maddalena.jpeg" 
+              alt="Nome Avvocato" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="p-4 text-center">
+            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Maddalena Cuomo</h3>
+            <p className="text-properzi-beige">Notaio</p>
+          </div>
+              </div>
+
             </div>
           </div>
         </div>
