@@ -76,7 +76,7 @@ const Home = () => {
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-              {/* Staff Member 1 - Repeat this block for each staff member */}
+              {/* Vanessa */}
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
           <div className="aspect-square overflow-hidden">
             <img 
@@ -91,7 +91,7 @@ const Home = () => {
           </div>
               </div>
               
-              {/* Add more staff members as needed */}
+              {/* praticante */}
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
           <div className="aspect-square overflow-hidden">
             <img 
@@ -105,7 +105,7 @@ const Home = () => {
             <p className="text-properzi-beige">Dott.ssa Praticante</p>
           </div>
               </div>
-              
+              {/* Ale Poma */}
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
           <div className="aspect-square overflow-hidden">
             <img 
@@ -119,7 +119,7 @@ const Home = () => {
             <p className="text-properzi-beige">Avvocato Penalista</p>
           </div>
               </div>
-            
+              {/* Maddalena */}
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
           <div className="aspect-square overflow-hidden">
             <img 
@@ -148,15 +148,71 @@ const Home = () => {
               Offriamo una gamma completa di servizi legali su misura per soddisfare le diverse esigenze dei nostri clienti.
             </p>
           </div>
-          {/*Diritto Civile*/}
+          import { useState } from "react";
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow">
-              <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto Civile</h3>
-              <p className="text-properzi-navy/80 mb-4">Contenziosi, responsabilità civile, risarcimento danni, diritto di proprietà e contrattualistica.</p>
-              <Link to="/contact" className="text-properzi-beige hover:text-properzi-navy transition-colors flex items-center gap-1 font-medium">
-                Maggiori informazioni <ArrowRight size={16} />
-              </Link>
-            </div>
+            {/* Diritto Civile - Flippable Card */}
+            {(() => {
+              const [isFlipped, setIsFlipped] = useState(false);
+              
+              return (
+                <div 
+                  className="bg-white rounded shadow-sm hover:shadow-md transition-shadow relative h-[250px]"
+                  style={{ perspective: "1000px" }}
+                >
+                  <div 
+                    className="w-full h-full transition-all duration-500 absolute"
+                    style={{ 
+                      transformStyle: "preserve-3d", 
+                      transform: isFlipped ? "rotateY(180deg)" : "rotateY(0deg)"
+                    }}
+                  >
+                    {/* Front Side */}
+                    <div 
+                      className="absolute w-full h-full p-6 flex flex-col justify-between"
+                      style={{ backfaceVisibility: "hidden" }}
+                    >
+                      <div>
+                        <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto Civile</h3>
+                        <p className="text-properzi-navy/80 mb-4">Contenziosi, responsabilità civile, risarcimento danni, diritto di proprietà e contrattualistica.</p>
+                      </div>
+                      <button 
+                        onClick={() => setIsFlipped(true)}
+                        className="text-properzi-beige hover:text-properzi-navy transition-colors flex items-center gap-1 font-medium"
+                      >
+                        Maggiori informazioni <ArrowRight size={16} />
+                      </button>
+                    </div>
+                    
+                    {/* Back Side */}
+                    <div 
+                      className="absolute w-full h-full p-6 bg-properzi-navy text-white flex flex-col justify-between"
+                      style={{ 
+                        backfaceVisibility: "hidden",
+                        transform: "rotateY(180deg)"
+                      }}
+                    >
+                      <div>
+                        <h3 className="text-xl font-cinzel font-medium mb-3">Diritto Civile</h3>
+                        <p className="mb-2">La nostra consulenza include:</p>
+                        <ul className="list-disc pl-5 text-sm mb-4">
+                          <li>Controversie contrattuali</li>
+                          <li>Responsabilità civile</li>
+                          <li>Risarcimento danni</li>
+                          <li>Tutela della proprietà</li>
+                        </ul>
+                      </div>
+                      <button 
+                        onClick={() => setIsFlipped(false)}
+                        className="text-properzi-beige hover:text-white transition-colors flex items-center gap-1 font-medium"
+                      >
+                        <ArrowRight size={16} className="transform rotate-180 mr-1" /> Torna indietro
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
             {/*Diritto di Famiglia*/}
             <div className="bg-white p-6 rounded shadow-sm hover:shadow-md transition-shadow">
               <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto di Famiglia</h3>
