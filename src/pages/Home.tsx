@@ -44,11 +44,11 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="text-center p-6 bg-properzi-navy/5 rounded-lg">
             <div className="flex items-center justify-center">
-                <img 
-                  src="/photos/avvocati-logo-4.png" 
-                  alt="Corte Suprema di Cassazione Logo" 
-                  className="max-h-24 mx-auto"
-                />
+          <img 
+            src="/photos/avvocati-logo-4.png" 
+            alt="Corte Suprema di Cassazione Logo" 
+            className="max-h-24 mx-auto"
+          />
               </div>
             </div>
             <div className="text-center p-6 bg-properzi-navy/5 rounded-lg">
@@ -57,16 +57,74 @@ const Home = () => {
             </div>
             <div className="text-center p-6 bg-properzi-navy/5 rounded-lg">
               <div className="flex items-center justify-center">
-                <img 
-                  src="/photos/logo_CorteSupremaCassazione.png" 
-                  alt="Corte Suprema di Cassazione Logo" 
-                  className="max-h-24 mx-auto"
-                />
+          <img 
+            src="/photos/logo_CorteSupremaCassazione.png" 
+            alt="Corte Suprema di Cassazione Logo" 
+            className="max-h-24 mx-auto"
+          />
               </div>
             </div>
           </div>
+          
+          {/* Staff Section */}
+          <div className="mt-20">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="section-title text-center">Il Nostro Team</h2>
+              <div className="divider mx-auto"></div>
+              <p className="text-properzi-navy/90">
+          Professionisti qualificati e dedicati al servizio delle vostre esigenze legali.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+              {/* Staff Member 1 - Repeat this block for each staff member */}
+              <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div className="aspect-square overflow-hidden">
+            <img 
+              src="/photos/cover.jpeg" 
+              alt="Nome Avvocato" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="p-4 text-center">
+            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Nome Cognome</h3>
+            <p className="text-properzi-beige">Avvocato</p>
+          </div>
+              </div>
+              
+              {/* Add more staff members as needed */}
+              <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div className="aspect-square overflow-hidden">
+            <img 
+              src="/photos/cover.jpeg" 
+              alt="Nome Avvocato" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="p-4 text-center">
+            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Nome Cognome</h3>
+            <p className="text-properzi-beige">Avvocato</p>
+          </div>
+              </div>
+              
+              <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+          <div className="aspect-square overflow-hidden">
+            <img 
+              src="/photos/cover.jpeg" 
+              alt="Nome Avvocato" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="p-4 text-center">
+            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Nome Cognome</h3>
+            <p className="text-properzi-beige">Avvocato</p>
+          </div>
+              </div>
+              
+            </div>
+          </div>
         </div>
-      </section>
+            </section>
       {/* Services Section */}
       <section className="section-padding bg-properzi-navy/5 py-16">
         <div className="container-custom">
