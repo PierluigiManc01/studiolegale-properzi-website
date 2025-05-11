@@ -20,10 +20,10 @@ const Home = () => {
         </div>
         <div className="container-custom relative z-10">
           <div className="ml-auto max-w-2xl text-center md:text-right"> 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6 text-properzi-navy">
+            <h1 className="text-2xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6 text-properzi-navy">
               Properzi Studio Legale
             </h1>
-            <p className="text-lg md:text-xl mb-8 text-properzi-navy/90">
+            <p className="text-base md:text-xl mb-8 text-properzi-navy/90">
               Competenza ed esperienza al servizio della giustizia
             </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-end gap-2"> 
