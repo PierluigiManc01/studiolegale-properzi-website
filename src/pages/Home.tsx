@@ -124,7 +124,7 @@ const Home = () => {
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
           <div className="aspect-square overflow-hidden">
             <img 
-              src="/photos/maddalena.jpeg" 
+              src="/photos/maddalena.png" 
               alt="Nome Avvocato" 
               className="w-full h-full object-cover"
             />
