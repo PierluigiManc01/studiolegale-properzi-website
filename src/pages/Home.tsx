@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
+import { useState } from "react";
 
 const Home = () => {
   return (
@@ -148,8 +149,6 @@ const Home = () => {
               Offriamo una gamma completa di servizi legali su misura per soddisfare le diverse esigenze dei nostri clienti.
             </p>
           </div>
-          import { useState } from "react";
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Diritto Civile - Flippable Card */}
             {(() => {
