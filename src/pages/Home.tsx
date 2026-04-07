@@ -10,11 +10,11 @@ const Home = () => {
     <>
       {/* Hero Section */}
       <section id='home' className="relative h-[60vh] md:h-[70vh] flex items-center banner-clip overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-properzi-beige md:bg-transparent">
           <img
             src="/photos/hero.png" 
             alt="Hero Background" 
-            className="w-full h-full object-cover brightness-60"
+            className="hidden md:block w-full h-full object-cover brightness-60"
             style={{ filter: 'opacity(0.5)' }}
           />
         </div>
@@ -556,7 +556,7 @@ const Home = () => {
                   </div>
                 </div>
                 
-                <div href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7" className="flex items-start space-x-4">
+                <a href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7" target="_blank" rel="noopener noreferrer" className="flex items-start space-x-4">
                   <div className="h-10 w-10 rounded-full bg-properzi-navy flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5 text-white" />
                   </div>
@@ -568,7 +568,7 @@ const Home = () => {
                       Italia
                     </a>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
             
