@@ -80,7 +80,7 @@ const Home = () => {
               <h2 className="section-title text-center">Il Nostro Team</h2>
               <div className="divider mx-auto"></div>
               <p className="text-properzi-navy/90">
-          Professionisti qualificati e dedicati al servizio delle vostre esigenze legali.
+          Collaboriamo con professionisti esterni qualificati e dedicati al servizio delle vostre esigenze legali.
               </p>
             </div>
             
@@ -104,7 +104,7 @@ const Home = () => {
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
           <div className="aspect-square overflow-hidden">
             <img 
-              src="/photos/cover.jpeg" 
+              src="/photos/alepoma.jpeg" 
               alt="Nome Avvocato" 
               className="w-full h-full object-cover"
             />
@@ -112,7 +112,8 @@ const Home = () => {
           <div className="p-4 text-center">
             <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Alessandra Poma</h3>
             <p className="text-properzi-beige">Avvocato Penalista</p>
-          </div>
+            <p className="text-properzi-navy text-xs">Studio: Piazza Monteleone di Spoleto, 8; Roma</p>
+          </div>        
               </div>
               {/* Maddalena */}
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
@@ -126,6 +127,7 @@ const Home = () => {
           <div className="p-4 text-center">
             <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Maddalena Cuomo</h3>
             <p className="text-properzi-beige">Notaio</p>
+            <p className="text-properzi-navy text-xs">Studio: Via Paraguay, 5; Roma</p>
           </div>
               </div>
 
