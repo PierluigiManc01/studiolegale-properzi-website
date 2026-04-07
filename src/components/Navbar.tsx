@@ -68,6 +68,12 @@ const Navbar = () => {
           >
             Contatti
           </Link>
+          <Link
+            to="/candidature"
+            className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm"
+          >
+            Candidature
+          </Link>
           <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors uppercase text-xs tracking-wider">
           <Link to="/contact">Prenota Consulenza</Link>
           </Button>
