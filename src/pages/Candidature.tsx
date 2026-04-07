@@ -69,11 +69,11 @@ const Candidature = () => {
 
     emailjs
       .sendForm(
-        "service_id",
-        "template_candidature",
+        "service_syt5b2e",
+        "template_z1rltbc",
         formRef.current!,
-        "user_id"
-      )
+        "3lw5HEIBzvyKlfMli"
+            )
       .then(
         () => {
           toast.success("Candidatura inviata con successo!");
@@ -151,10 +151,35 @@ const Candidature = () => {
             </div>
           </div>
 
-          {/* Application Form */}
+          {/* Email Application Instructions */}
           <div className="max-w-xl mx-auto">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-xl font-cinzel text-properzi-navy mb-6 text-center">Invia la Tua Candidatura</h3>
+              <div className="text-center space-y-4 text-properzi-navy/80">
+                <p>
+                  Per inviare la candidatura, ti invitiamo a mandare un'email all'indirizzo:
+                </p>
+                <a href="mailto:vanessa.properzi@libero.it" className="text-lg font-bold text-properzi-beige hover:underline block">
+                  vanessa.properzi@libero.it
+                </a>
+                <div className="bg-properzi-navy/5 p-4 rounded-md text-sm inline-block text-left mt-4 border border-properzi-navy/10">
+                  <p className="mb-2"><strong>Oggetto da inserire:</strong></p>
+                  <code className="text-properzi-navy font-semibold px-2 py-1 bg-white rounded border border-properzi-navy/20">
+                    CANDIDATURA praticante dal sito - Nome Cognome
+                  </code>
+                </div>
+                <p className="mt-4 text-sm font-medium text-properzi-navy">
+                  * È obbligatorio allegare il proprio Curriculum Vitae.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Application Form (Temporarily disabled for future use) */}
+          {false && (
+          <div className="max-w-xl mx-auto mt-12">
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <h3 className="text-xl font-cinzel text-properzi-navy mb-6 text-center">Invia la Tua Candidatura tramite form</h3>
               <Form {...form}>
                 <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
                   <FormField
@@ -251,6 +276,7 @@ const Candidature = () => {
               </Form>
             </div>
           </div>
+          )}
         </div>
       </section>
     </div>

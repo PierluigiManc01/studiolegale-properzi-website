@@ -41,19 +41,19 @@ const ContactForm = () => {
 
   function onSubmit(values: ContactFormValues) {
     setIsLoading(true);
-    
+
     // Replace with your actual EmailJS details
     emailjs
       .send(
-        "service_id", // Service ID - you'll need to provide this
-        "template_id", // Template ID - you'll need to provide this
+        "service_syt5b2e",
+        "template_ahz19nk",
         {
           from_name: values.name,
           from_email: values.email,
           phone: values.phone,
           message: values.message,
         },
-        "user_id" // User ID - you'll need to provide this
+        "3lw5HEIBzvyKlfMli"
       )
       .then(
         () => {
@@ -119,7 +119,7 @@ const ContactForm = () => {
               <FormLabel>Messaggio</FormLabel>
               <FormControl>
                 <Textarea
-                  placeholder="Descrivi la tua situazione..."
+                  placeholder="Descrivi la tua richiesta per una consulenza legale"
                   className="min-h-[120px] border-properzi-navy/20"
                   {...field}
                 />
