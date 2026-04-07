@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 import Home from "./pages/Home";
 //import SuccessStories from "./pages/SuccessStories";
 import Contact from "./pages/Contact";
+import Candidature from "./pages/Candidature";
 import CookieConsent from "./components/CookieConsent";
 import NotFound from "./pages/NotFound";
 
