@@ -21,10 +21,10 @@ const Home = () => {
         <div className="container-custom relative z-10">
           <div className="ml-auto max-w-2xl text-center md:text-right"> 
             <h1 className="text-2xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6 text-properzi-navy">
-              Properzi Studio Legale
+              Studio Legale Properzi
             </h1>
             <p className="text-base md:text-xl mb-8 text-properzi-navy/90">
-              Competenza ed esperienza al servizio della giustizia
+              L'Avvocato Vanessa Properzi, con il suo Studio a Roma, coordina un network di professionisti esperti dedicati alla tua tutela legale.
             </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-end gap-2"> 
               <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors py-4 md:py-6 px-6 md:px-8">
@@ -41,12 +41,11 @@ const Home = () => {
             <h2 className="section-title text-center">Chi Siamo</h2>
             <div className="divider mx-auto"></div>
             <p className="mb-6 text-properzi-navy/90 leading-relaxed">
-              Properzi Studio Legale ha una consolidata esperienza nel settore legale. 
-              Offriamo assistenza di alta qualità, personalizzata e specializzata a privati, aziende ed enti pubblici.
+              Lo Studio Legale Properzi opera a Roma da più di 20 anni. Da una solida iniziativa dell'Avvocato Vanessa Properzi, 
+              lo Studio fornisce assistenza di eccellenza, attenta e personalizzata per privati, imprese ed enti.
             </p>
             <p className="text-properzi-navy/90 leading-relaxed">
-              Ci distinguiamo per la nostra dedizione e competenza, fornendo sempre soluzioni accurate 
-              e mirate alle specifiche esigenze dei nostri clienti.
+              Il nostro approccio integra la competenza diretta dello Studio con una stretta collaborazione insieme a professionisti esterni d'eccezione, garantendo così una copertura a 360 gradi nella cura delle tue posizioni.
             </p>
           </div>          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
@@ -77,60 +76,74 @@ const Home = () => {
           {/* Staff Section */}
           <div className="mt-20">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="section-title text-center">Il Nostro Team</h2>
+              <h2 className="section-title text-center">Studio Legale Properzi</h2>
               <div className="divider mx-auto"></div>
-              <p className="text-properzi-navy/90">
-          Collaboriamo con professionisti esterni qualificati e dedicati al servizio delle vostre esigenze legali.
+              <p className="text-properzi-navy/90 mb-8">
+                Lo Studio fa fondamento sull'esperienza, la dedizione e l'alta specializzazione dell'Avvocato Vanessa Properzi.
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
-              {/* Vanessa */}
+            <div className="max-w-md mx-auto mb-16">
+              {/* Vanessa - Founder */}
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-          <div className="aspect-square overflow-hidden">
-            <img 
-              src="/photos/vanessa.jpeg" 
-              alt="Nome Avvocato" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="p-4 text-center">
-            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Vanessa Properzi</h3>
-            <p className="text-properzi-beige">Avvocato Civilista</p>
-          </div>
+                <div className="aspect-square overflow-hidden">
+                  <img 
+                    src="/photos/vanessa.jpeg" 
+                    alt="Avvocato Vanessa Properzi" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="font-cinzel text-2xl text-properzi-navy font-medium mb-1">Avv. Vanessa Properzi</h3>
+                  <p className="text-properzi-beige font-semibold mb-2">Titolare dello Studio - Avvocato Civilista</p>
+                  <p className="text-properzi-navy/80 text-sm">Avvocato cassazionista esperta in diritto civile a Roma, da oltre 20 anni tutela con successo i propri assistiti al cuore della capitale.</p>
+                </div>
               </div>
-              
+            </div>
+          </div>
+
+          {/* External Collaborators Section */}
+          <div className="mt-20">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <h2 className="section-title text-center">I Nostri Professionisti in Partnership</h2>
+              <div className="divider mx-auto"></div>
+              <p className="text-properzi-navy/90">
+                Lo Studio Legale Properzi si avvale inoltre della stretta collaborazione di professionisti esterni, qualificati e specializzati, per completare tempestivamente e con la massima cura le vostre esigenze in ogni settore.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {/* Ale Poma */}
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-          <div className="aspect-square overflow-hidden">
-            <img 
-              src="/photos/alepoma.jpeg" 
-              alt="Nome Avvocato" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="p-4 text-center">
-            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Alessandra Poma</h3>
-            <p className="text-properzi-beige">Avvocato Penalista</p>
-            <p className="text-properzi-navy text-xs">Studio: Piazza Monteleone di Spoleto, 8; Roma</p>
-          </div>        
+                <div className="aspect-square overflow-hidden">
+                  <img 
+                    src="/photos/alepoma.jpeg" 
+                    alt="Avvocato Alessandra Poma" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Avv. Alessandra Poma</h3>
+                  <p className="text-properzi-beige">Avvocato Penalista - Partner Esterno</p>
+                  <p className="text-properzi-navy text-xs mt-2">Studio: P.zza Monteleone di Spoleto, 8; Roma</p>
+                </div>        
               </div>
+              
               {/* Maddalena */}
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-          <div className="aspect-square overflow-hidden">
-            <img 
-              src="/photos/maddalena.png" 
-              alt="Nome Avvocato" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="p-4 text-center">
-            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Maddalena Cuomo</h3>
-            <p className="text-properzi-beige">Notaio</p>
-            <p className="text-properzi-navy text-xs">Studio: Via Paraguay, 5; Roma</p>
-          </div>
+                <div className="aspect-square overflow-hidden">
+                  <img 
+                    src="/photos/maddalena.png" 
+                    alt="Notaio Maddalena Cuomo" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Notaio Maddalena Cuomo</h3>
+                  <p className="text-properzi-beige">Notaio - Partner Esterno</p>
+                  <p className="text-properzi-navy text-xs mt-2">Studio: Via Paraguay, 5; Roma</p>
+                </div>
               </div>
-
             </div>
           </div>
         </div>
@@ -169,7 +182,7 @@ const Home = () => {
                     >
                       <div>
                         <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto Civile</h3>
-                        <p className="text-properzi-navy/80 mb-4">Contenziosi, responsabilità civile, risarcimento danni, diritto di proprietà e contrattualistica.</p>
+                        <p className="text-properzi-navy/80 mb-4">Assistenza stragiudiziale e contenzioso, responsabilità civile, risarcimento danni, recupero crediti e contrattualistica.</p>
                       </div>
                       <button 
                         onClick={() => setIsFlipped(true)}
@@ -191,10 +204,10 @@ const Home = () => {
                         <h3 className="text-xl font-cinzel font-medium mb-3">Diritto Civile</h3>
                         <p className="mb-2">La nostra consulenza include:</p>
                         <ul className="list-disc pl-5 text-sm mb-4">
-                          <li>Controversie contrattuali</li>
-                          <li>Responsabilità civile</li>
-                          <li>Risarcimento danni</li>
-                          <li>Tutela della proprietà</li>
+                          <li>Redazione e revisione contratti</li>
+                          <li>Recupero crediti ed esecuzioni (pignoramenti)</li>
+                          <li>Risarcimento danni e infortunistica stradale</li>
+                          <li>Responsabilità medica e professionale</li>
                         </ul>
                       </div>
                       <button 
@@ -231,7 +244,7 @@ const Home = () => {
                     >
                       <div>
                         <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto di Famiglia</h3>
-                        <p className="text-properzi-navy/80 mb-4">Separazioni, divorzi, affidamento minori e tutela dei minori.</p>
+                        <p className="text-properzi-navy/80 mb-4">Separazioni, divorzi, affidamento, tutela dei minori e amministrazione di sostegno.</p>
                       </div>
                       <button 
                         onClick={() => setIsFlipped(true)}
@@ -253,10 +266,10 @@ const Home = () => {
                         <h3 className="text-xl font-cinzel font-medium mb-3">Diritto di Famiglia</h3>
                         <p className="mb-2">La nostra consulenza include:</p>
                         <ul className="list-disc pl-5 text-sm mb-4">
-                          <li>Controversie contrattuali</li>
-                          <li>Responsabilità civile</li>
-                          <li>Risarcimento danni</li>
-                          <li>Tutela della proprietà</li>
+                          <li>Separazioni e divorzi (consensuali e giudiziali)</li>
+                          <li>Negoziazione assistita</li>
+                          <li>Affidamento e mantenimento dei minori</li>
+                          <li>Ricorsi per amministrazione di sostegno</li>
                         </ul>
                       </div>
                       <button 
@@ -293,7 +306,7 @@ const Home = () => {
                     >
                       <div>
                         <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto Immobiliare</h3>
-                        <p className="text-properzi-navy/80 mb-4">Compravendite, locazioni, condomini, diritti reali e controversie immobiliari.</p>
+                        <p className="text-properzi-navy/80 mb-4">Compravendite, locazioni, tutela della proprietà. Supporto contrattuale e condominiale, sfratti e controversie immobiliari.</p>
                       </div>
                       <button 
                         onClick={() => setIsFlipped(true)}
@@ -315,10 +328,10 @@ const Home = () => {
                         <h3 className="text-xl font-cinzel font-medium mb-3">Diritto Immobiliare</h3>
                         <p className="mb-2">La nostra consulenza include:</p>
                         <ul className="list-disc pl-5 text-sm mb-4">
-                          <li>Controversie contrattuali</li>
-                          <li>Responsabilità civile</li>
-                          <li>Risarcimento danni</li>
-                          <li>Tutela della proprietà</li>
+                          <li>Sfratti per morosità e finita locazione</li>
+                          <li>Redazione contratti (preliminari e locazioni)</li>
+                          <li>Vizi dell'immobile e controversie su appalti</li>
+                          <li>Impugnazione delibere condominiali</li>
                         </ul>
                       </div>
                       <button 
@@ -375,13 +388,7 @@ const Home = () => {
                     >
                       <div>
                         <h3 className="text-xl font-cinzel font-medium mb-3">Diritto Penale</h3>
-                        <p className="mb-2">La nostra consulenza include:</p>
-                        <ul className="list-disc pl-5 text-sm mb-4">
-                          <li>Controversie contrattuali</li>
-                          <li>Responsabilità civile</li>
-                          <li>Risarcimento danni</li>
-                          <li>Tutela della proprietà</li>
-                        </ul>
+                        <p className="text-sm mb-4">L'avvocato Poma sarà disponibile presso lo studio, previo appuntamento, per fornire consulenza e rappresentanza in procedimenti penali, nonché per la consulenza preventiva e la tutela legale completa.</p>
                       </div>
                       <button 
                         onClick={() => setIsFlipped(false)}
@@ -417,7 +424,7 @@ const Home = () => {
                     >
                       <div>
                         <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Diritto del Lavoro</h3>
-                        <p className="text-properzi-navy/80 mb-4">Contratti di lavoro, licenziamenti, controversie lavorative e previdenza sociale.</p>
+                        <p className="text-properzi-navy/80 mb-4">Tutela del lavoratore e dell'azienda: licenziamenti, retribuzioni, infortuni e controversie lavorative.</p>
                       </div>
                       <button 
                         onClick={() => setIsFlipped(true)}
@@ -439,10 +446,10 @@ const Home = () => {
                         <h3 className="text-xl font-cinzel font-medium mb-3">Diritto del Lavoro</h3>
                         <p className="mb-2">La nostra consulenza include:</p>
                         <ul className="list-disc pl-5 text-sm mb-4">
-                          <li>Controversie contrattuali</li>
-                          <li>Responsabilità civile</li>
-                          <li>Risarcimento danni</li>
-                          <li>Tutela della proprietà</li>
+                          <li>Impugnazione licenziamenti e sanzioni disciplinari</li>
+                          <li>Recupero differenze retributive e TFR</li>
+                          <li>Mobbing e infortuni sul lavoro</li>
+                          <li>Contrattualistica e rapporti d'agenzia</li>
                         </ul>
                       </div>
                       <button 
@@ -479,7 +486,7 @@ const Home = () => {
                     >
                       <div>
                         <h3 className="text-xl font-cinzel font-medium mb-3 text-properzi-navy">Successioni</h3>
-                        <p className="text-properzi-navy/80 mb-4">Costituzione società, fusioni, acquisizioni, corporate governance e consulenza aziendale.</p>
+                        <p className="text-properzi-navy/80 mb-4">Successioni, divisioni e contenziosi ereditari, conservazione del patrimonio.</p>
                       </div>
                       <button 
                         onClick={() => setIsFlipped(true)}
@@ -501,11 +508,9 @@ const Home = () => {
                         <h3 className="text-xl font-cinzel font-medium mb-3">Successioni</h3>
                         <p className="mb-2">La nostra consulenza include:</p>
                         <ul className="list-disc pl-5 text-sm mb-4">
-                          <li>Controversie contrattuali</li>
-                          <li>Responsabilità civile</li>
-                          <li>Risarcimento danni</li>
-                          <li>Tutela della proprietà</li>
-                        </ul>
+                          <li>Pianificazione e dichiarazione successoria e tutela del patrimonio</li>
+                          <li>Redazione e impugnazione testamenti</li>
+                          <li>Accettazione con beneficio d'inventario o rinuncia all'eredità</li>                        </ul>
                       </div>
                       <button 
                         onClick={() => setIsFlipped(false)}
