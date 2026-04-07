@@ -68,6 +68,12 @@ const Navbar = () => {
           >
             Contatti
           </Link>
+          <Link
+            to="/candidature"
+            className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm"
+          >
+            Candidature
+          </Link>
           <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors uppercase text-xs tracking-wider">
           <Link to="/contact">Prenota Consulenza</Link>
           </Button>
@@ -128,6 +134,13 @@ const Navbar = () => {
               onClick={closeMobileMenu}
             >
               Contatti
+            </Link>
+            <Link
+              to="/candidature"
+              className="text-properzi-navy hover:text-properzi-navy/70 font-medium transition-colors uppercase tracking-wider text-lg py-2"
+              onClick={closeMobileMenu}
+            >
+              Candidature
             </Link>
             <Button asChild className="bg-properzi-navy hover:bg-properzi-navy/80 text-white transition-colors uppercase text-sm tracking-wider w-full py-4">
               <Link to="/contact" onClick={closeMobileMenu}>Prenota Consulenza</Link>
