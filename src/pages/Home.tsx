@@ -10,11 +10,11 @@ const Home = () => {
     <>
       {/* Hero Section */}
       <section id='home' className="relative h-[60vh] md:h-[70vh] flex items-center banner-clip overflow-hidden">
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-properzi-beige md:bg-transparent">
           <img
             src="/photos/hero.png" 
             alt="Hero Background" 
-            className="w-full h-full object-cover brightness-60"
+            className="hidden md:block w-full h-full object-cover brightness-60"
             style={{ filter: 'opacity(0.5)' }}
           />
         </div>
