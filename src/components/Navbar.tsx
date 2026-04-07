@@ -56,12 +56,12 @@ const Navbar = () => {
           >
             Home
           </Link>
-          <Link
+          {/*<Link
             to="/success-stories"
             className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm"
           >
             Casi di Successo
-          </Link>
+          </Link>*/}
           <Link
             to="/contact"
             className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm"
@@ -97,13 +97,13 @@ const Navbar = () => {
             >
               Home
             </Link>
-            <Link
+            {/*<Link
               to="/success-stories"
               className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm py-2"
               onClick={closeMobileMenu}
             >
               Casi di Successo
-            </Link>
+            </Link>*/}
             <Link
               to="/contact"
               className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm py-2"

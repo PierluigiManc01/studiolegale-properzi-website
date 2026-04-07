@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id='home' className="relative h-[70vh] flex items-center banner-clip">
+      <section id='home' className="relative h-[60vh] md:h-[70vh] flex items-center banner-clip overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/photos/hero.png" 
@@ -26,9 +26,9 @@ const Home = () => {
             <p className="text-base md:text-xl mb-8 text-properzi-navy/90">
               Competenza ed esperienza al servizio della giustizia
             </p>
-            <div className="flex flex-col justify-center md:justify-end gap-2"> 
+            <div className="flex flex-col sm:flex-row justify-center md:justify-end gap-2"> 
               <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors py-4 md:py-6 px-6 md:px-8">
-                <Link to="/contact">Consulenza Legale</Link>
+                <Link to="/contact">Prenota Consulenza Legale</Link>
               </Button>
             </div>
           </div>
@@ -84,7 +84,7 @@ const Home = () => {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
               {/* Vanessa */}
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
           <div className="aspect-square overflow-hidden">
@@ -100,20 +100,6 @@ const Home = () => {
           </div>
               </div>
               
-              {/* praticante */}
-              <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-          <div className="aspect-square overflow-hidden">
-            <img 
-              src="/photos/cover.jpeg" 
-              alt="Nome Avvocato" 
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <div className="p-4 text-center">
-            <h3 className="font-cinzel text-xl text-properzi-navy font-medium">Martina Cacciapuoti</h3>
-            <p className="text-properzi-beige">Dott.ssa Praticante</p>
-          </div>
-              </div>
               {/* Ale Poma */}
               <div className="bg-properzi-navy/5 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
           <div className="aspect-square overflow-hidden">
