@@ -556,7 +556,7 @@ const Home = () => {
                   </div>
                 </div>
                 
-                <div href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7" className="flex items-start space-x-4">
+                <a href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7" target="_blank" rel="noopener noreferrer" className="flex items-start space-x-4">
                   <div className="h-10 w-10 rounded-full bg-properzi-navy flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5 text-white" />
                   </div>
