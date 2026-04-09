@@ -4,7 +4,7 @@ import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
   return (
-    <div className="pt-24">
+    <div className="pt-24 md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56">
       {/* Hero Section */}
       <section className="bg-properzi-navy text-white py-10 pt-20 banner-clip overflow-hidden">
         <div className="container-custom">

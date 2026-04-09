@@ -91,7 +91,7 @@ const Candidature = () => {
   }
 
   return (
-    <div className="pt-24">
+    <div className="pt-24 md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56">
       {/* Hero Section */}
       <section className="bg-properzi-navy text-white py-10 pt-20 banner-clip overflow-hidden">
         <div className="container-custom">
@@ -164,7 +164,7 @@ const Candidature = () => {
                 </a>
                 <div className="bg-properzi-navy/5 p-4 rounded-md text-sm inline-block text-left mt-4 border border-properzi-navy/10">
                   <p className="mb-2"><strong>Oggetto da inserire:</strong></p>
-                  <code className="text-properzi-navy font-semibold px-2 py-1 bg-white rounded border border-properzi-navy/20">
+                  <code className="block w-full max-w-full whitespace-normal break-words text-center sm:text-left text-xs sm:text-sm text-properzi-navy font-semibold px-3 py-2 bg-white rounded border border-properzi-navy/20">
                     CANDIDATURA praticante dal sito - Nome Cognome
                   </code>
                 </div>

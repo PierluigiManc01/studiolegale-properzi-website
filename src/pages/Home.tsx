@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section id='home' className="relative h-[60vh] md:h-[70vh] flex items-center banner-clip overflow-hidden">
+      <section id='home' className="relative min-h-[60vh] md:min-h-[70vh] flex items-center banner-clip overflow-hidden pt-20 md:pt-28 lg:pt-36 xl:pt-48 2xl:pt-64 pb-12">
         <div className="absolute inset-0 bg-properzi-beige md:bg-transparent">
           <img
             src="/photos/hero.png" 
@@ -18,16 +18,16 @@ const Home = () => {
             style={{ filter: 'opacity(0.5)' }}
           />
         </div>
-        <div className="container-custom relative z-10">
-          <div className="ml-auto max-w-2xl text-center md:text-right"> 
-            <h1 className="text-2xl md:text-5xl lg:text-6xl font-cinzel font-bold mb-6 text-properzi-navy">
+        <div className="w-full px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-24 relative z-10">
+          <div className="ml-auto max-w-2xl xl:max-w-3xl 2xl:max-w-4xl text-center md:text-right"> 
+            <h1 className="text-2xl md:text-5xl lg:text-6xl 2xl:text-7xl font-cinzel font-bold mb-6 text-properzi-navy">
               Studio Legale Properzi
             </h1>
-            <p className="text-base md:text-xl mb-8 text-properzi-navy/90">
+            <p className="text-base md:text-xl 2xl:text-2xl mb-8 text-properzi-navy/90">
               L'Avvocato Vanessa Properzi, con il suo Studio a Roma, coordina un network di professionisti esperti dedicati alla tua tutela legale.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center md:justify-end gap-2"> 
-              <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors py-4 md:py-6 px-6 md:px-8">
+            <div className="flex flex-col sm:flex-row justify-center md:justify-end gap-2 relative z-50"> 
+              <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors py-4 md:py-6 px-6 md:px-8 2xl:py-8 2xl:px-10 2xl:text-lg">
                 <Link to="/contact">Prenota Consulenza Legale</Link>
               </Button>
             </div>
