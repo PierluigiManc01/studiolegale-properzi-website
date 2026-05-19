@@ -1,0 +1,11 @@
+# Studio Legale Properzi
+
+> Studio Legale a Roma dell'Avvocato Vanessa Properzi. Assistenza legale civile a 360° con un network di professionisti qualificati.
+
+Lo Studio Legale Properzi opera a Roma da oltre 20 anni, offrendo consulenza e assistenza legale a privati, imprese ed enti. L'attività integra la competenza diretta dello Studio con la collaborazione di professionisti esterni di fiducia.
+
+## Pages
+
+- [Home](/): Presentazione dello Studio, aree di pratica e team.
+- [Contatti](/contact): Recapiti, indirizzo e form per prenotare una consulenza.
+- [Candidature](/candidature): Informazioni e invio candidature per praticanti, anche non abilitati.

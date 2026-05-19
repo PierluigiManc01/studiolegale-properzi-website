@@ -1,5 +1,6 @@
 
 import { useState, useRef } from "react";
+import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -92,6 +93,15 @@ const Candidature = () => {
 
   return (
     <div className="pt-24 md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56">
+      <Helmet>
+        <title>Candidature Praticanti | Studio Legale Properzi Roma</title>
+        <meta name="description" content="Candidature per praticanti, anche non abilitati, presso lo Studio Legale Properzi a Roma. Esperienza pratica in studio e in tribunale." />
+        <link rel="canonical" href="https://studiolegale-properzi.com/candidature" />
+        <meta property="og:title" content="Candidature Praticanti | Studio Legale Properzi" />
+        <meta property="og:description" content="Unisciti allo Studio Legale Properzi a Roma: praticanti coinvolti subito nelle attività di studio e udienze." />
+        <meta property="og:url" content="https://studiolegale-properzi.com/candidature" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-properzi-navy text-white py-10 pt-20 banner-clip overflow-hidden">
         <div className="container-custom">
