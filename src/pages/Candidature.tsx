@@ -150,22 +150,22 @@ const Candidature = () => {
           </div>
 
           {/* Application Form */}
-          <div className="max-w-xl mx-auto">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-xl font-cinzel text-properzi-navy mb-2 text-center">Invia la Tua Candidatura</h3>
-              <p className="text-center text-sm text-properzi-navy/70 mb-6">
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-properzi-navy p-10 md:p-12 rounded-lg shadow-lg">
+              <h3 className="text-2xl md:text-3xl font-cinzel text-properzi-beige mb-2 text-center">Invia la Tua Candidatura</h3>
+              <p className="text-center text-sm text-properzi-beige/70 mb-8">
                 Compila il form: la tua candidatura arriverà direttamente allo studio (properzi@studiolegale.it).
               </p>
               <Form {...form}>
-                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <FormField
                     control={form.control}
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Nome Completo</FormLabel>
+                        <FormLabel className="text-properzi-beige">Nome Completo</FormLabel>
                         <FormControl>
-                          <Input placeholder="Mario Rossi" {...field} className="border-properzi-navy/20" />
+                          <Input placeholder="Mario Rossi" {...field} className="h-11 text-base border-properzi-beige/30" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -176,9 +176,9 @@ const Candidature = () => {
                     name="email"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Email</FormLabel>
+                        <FormLabel className="text-properzi-beige">Email</FormLabel>
                         <FormControl>
-                          <Input placeholder="mario.rossi@esempio.com" {...field} className="border-properzi-navy/20" />
+                          <Input placeholder="mario.rossi@esempio.com" {...field} className="h-11 text-base border-properzi-beige/30" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -189,9 +189,9 @@ const Candidature = () => {
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Numero di Telefono</FormLabel>
+                        <FormLabel className="text-properzi-beige">Numero di Telefono</FormLabel>
                         <FormControl>
-                          <Input placeholder="+39 123 456 7890" {...field} className="border-properzi-navy/20" />
+                          <Input placeholder="+39 123 456 7890" {...field} className="h-11 text-base border-properzi-beige/30" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -200,16 +200,16 @@ const Candidature = () => {
 
                   {/* CV Upload */}
                   <div className="space-y-2">
-                    <label className="text-sm font-medium leading-none">Curriculum Vitae *</label>
+                    <label className="text-sm font-medium leading-none text-properzi-beige">Curriculum Vitae *</label>
                     <div
-                      className="border-2 border-dashed border-properzi-navy/20 rounded-lg p-6 text-center cursor-pointer hover:border-properzi-beige transition-colors"
+                      className="border-2 border-dashed border-properzi-beige/30 rounded-lg p-6 text-center cursor-pointer hover:border-properzi-beige transition-colors"
                       onClick={() => fileInputRef.current?.click()}
                     >
-                      <Upload className="h-8 w-8 text-properzi-navy/40 mx-auto mb-2" />
+                      <Upload className="h-8 w-8 text-properzi-beige/60 mx-auto mb-2" />
                       {fileName ? (
-                        <p className="text-sm text-properzi-navy font-medium">{fileName}</p>
+                        <p className="text-sm text-properzi-beige font-medium">{fileName}</p>
                       ) : (
-                        <p className="text-sm text-properzi-navy/60">
+                        <p className="text-sm text-properzi-beige/70">
                           Clicca per caricare il CV (PDF, DOC, DOCX — max 5MB)
                         </p>
                       )}
@@ -229,11 +229,11 @@ const Candidature = () => {
                     name="message"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Note aggiuntive (opzionale)</FormLabel>
+                        <FormLabel className="text-properzi-beige">Note aggiuntive (opzionale)</FormLabel>
                         <FormControl>
                           <Textarea
                             placeholder="Raccontaci brevemente di te..."
-                            className="min-h-[100px] border-properzi-navy/20"
+                            className="min-h-[120px] text-base border-properzi-beige/30"
                             {...field}
                           />
                         </FormControl>
@@ -243,7 +243,7 @@ const Candidature = () => {
                   />
                   <Button
                     type="submit"
-                    className="w-full bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors"
+                    className="w-full h-12 text-base bg-properzi-beige hover:bg-white text-properzi-navy transition-colors"
                     disabled={isLoading}
                   >
                     {isLoading ? "Invio in corso..." : "Invia Candidatura"}

@@ -4,7 +4,7 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Public-facing "from" address. Domain must be verified in the Resend dashboard.
-const SENDER_ADDRESS = process.env.RESEND_FROM_EMAIL || "Studio Legale Properzi <properzi@studiolegale.it>";
+const SENDER_ADDRESS = process.env.RESEND_FROM_EMAIL || "properzi@studiolegale.it";
 
 // Real mailbox that receives everything. Only ever referenced server-side, so it
 // never ships to the browser bundle — visitors only ever see SENDER_ADDRESS.
