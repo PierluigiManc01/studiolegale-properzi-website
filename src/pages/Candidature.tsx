@@ -15,7 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import emailjs from "@emailjs/browser";
+import { sendEmail, fileToBase64 } from "@/lib/send-email";
 import { Upload, Briefcase, Scale, Users } from "lucide-react";
 
 const candidatureSchema = z.object({
@@ -31,7 +31,6 @@ const Candidature = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [fileName, setFileName] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const formRef = useRef<HTMLFormElement>(null);
 
   const form = useForm<CandidatureFormValues>({
     resolver: zodResolver(candidatureSchema),
@@ -58,7 +57,7 @@ const Candidature = () => {
     }
   };
 
-  function onSubmit(values: CandidatureFormValues) {
+  async function onSubmit(values: CandidatureFormValues) {
     const file = fileInputRef.current?.files?.[0];
     if (!file) {
       toast.error("Allega il tuo curriculum per procedere.");
@@ -67,27 +66,26 @@ const Candidature = () => {
 
     setIsLoading(true);
 
-    emailjs
-      .sendForm(
-        "service_syt5b2e",
-        "template_z1rltbc",
-        formRef.current!,
-        "3lw5HEIBzvyKlfMli"
-            )
-      .then(
-        () => {
-          toast.success("Candidatura inviata con successo!");
-          form.reset();
-          setFileName(null);
-          if (fileInputRef.current) fileInputRef.current.value = "";
-          setIsLoading(false);
-        },
-        (error) => {
-          console.error("EmailJS error:", error);
-          toast.error("Invio della candidatura fallito. Riprova più tardi.");
-          setIsLoading(false);
-        }
-      );
+    try {
+      const content = await fileToBase64(file);
+      await sendEmail({
+        type: "candidatura",
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        message: values.message,
+        attachment: { filename: file.name, content },
+      });
+      toast.success("Candidatura inviata con successo!");
+      form.reset();
+      setFileName(null);
+      if (fileInputRef.current) fileInputRef.current.value = "";
+    } catch (error) {
+      console.error("Errore invio candidatura:", error);
+      toast.error("Invio della candidatura fallito. Riprova più tardi.");
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -151,37 +149,15 @@ const Candidature = () => {
             </div>
           </div>
 
-          {/* Email Application Instructions */}
+          {/* Application Form */}
           <div className="max-w-xl mx-auto">
             <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-xl font-cinzel text-properzi-navy mb-6 text-center">Invia la Tua Candidatura</h3>
-              <div className="text-center space-y-4 text-properzi-navy/80">
-                <p>
-                  Per inviare la candidatura, ti invitiamo a mandare un'email all'indirizzo:
-                </p>
-                <a href="mailto:vanessa.properzi@libero.it" className="text-lg font-bold text-properzi-beige hover:underline block">
-                  vanessa.properzi@libero.it
-                </a>
-                <div className="bg-properzi-navy/5 p-4 rounded-md text-sm inline-block text-left mt-4 border border-properzi-navy/10">
-                  <p className="mb-2"><strong>Oggetto da inserire:</strong></p>
-                  <code className="block w-full max-w-full whitespace-normal break-words text-center sm:text-left text-xs sm:text-sm text-properzi-navy font-semibold px-3 py-2 bg-white rounded border border-properzi-navy/20">
-                    CANDIDATURA praticante dal sito - Nome Cognome
-                  </code>
-                </div>
-                <p className="mt-4 text-sm font-medium text-properzi-navy">
-                  * È obbligatorio allegare il proprio Curriculum Vitae.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Application Form (Temporarily disabled for future use) */}
-          {false && (
-          <div className="max-w-xl mx-auto mt-12">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h3 className="text-xl font-cinzel text-properzi-navy mb-6 text-center">Invia la Tua Candidatura tramite form</h3>
+              <h3 className="text-xl font-cinzel text-properzi-navy mb-2 text-center">Invia la Tua Candidatura</h3>
+              <p className="text-center text-sm text-properzi-navy/70 mb-6">
+                Compila il form: la tua candidatura arriverà direttamente allo studio (properzi@studiolegale.it).
+              </p>
               <Form {...form}>
-                <form ref={formRef} onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
                   <FormField
                     control={form.control}
                     name="name"
@@ -276,7 +252,6 @@ const Candidature = () => {
               </Form>
             </div>
           </div>
-          )}
         </div>
       </section>
     </div>

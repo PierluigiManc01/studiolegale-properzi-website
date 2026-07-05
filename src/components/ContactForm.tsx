@@ -15,7 +15,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { toast } from "sonner";
-import emailjs from "@emailjs/browser";
+import { sendEmail } from "@/lib/send-email";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Il nome deve contenere almeno 2 caratteri." }),
@@ -39,34 +39,25 @@ const ContactForm = () => {
     },
   });
 
-  function onSubmit(values: ContactFormValues) {
+  async function onSubmit(values: ContactFormValues) {
     setIsLoading(true);
 
-    // Replace with your actual EmailJS details
-    emailjs
-      .send(
-        "service_syt5b2e",
-        "template_ahz19nk",
-        {
-          from_name: values.name,
-          from_email: values.email,
-          phone: values.phone,
-          message: values.message,
-        },
-        "3lw5HEIBzvyKlfMli"
-      )
-      .then(
-        () => {
-          toast.success("Messaggio inviato con successo!");
-          form.reset();
-          setIsLoading(false);
-        },
-        (error) => {
-          console.error("EmailJS error:", error);
-          toast.error("Invio del messaggio fallito. Riprova più tardi.");
-          setIsLoading(false);
-        }
-      );
+    try {
+      await sendEmail({
+        type: "consulenza",
+        name: values.name,
+        email: values.email,
+        phone: values.phone,
+        message: values.message,
+      });
+      toast.success("Messaggio inviato con successo!");
+      form.reset();
+    } catch (error) {
+      console.error("Errore invio email:", error);
+      toast.error("Invio del messaggio fallito. Riprova più tardi.");
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
