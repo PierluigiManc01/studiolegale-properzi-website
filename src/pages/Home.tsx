@@ -149,12 +149,12 @@ const Home = () => {
         </div>
             </section>
       {/* Services Section */}
-      <section className="section-padding bg-properzi-navy/5 py-16">
+      <section className="section-padding bg-properzi-navy py-16">
         <div className="container-custom">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="section-title text-center">Le Nostre Aree di Pratica</h2>
+            <h2 className="section-title text-center text-properzi-beige">Le Nostre Aree di Pratica</h2>
             <div className="divider mx-auto"></div>
-            <p className="text-properzi-navy/80">
+            <p className="text-properzi-beige/80">
               Offriamo una gamma completa di servizi legali su misura per soddisfare le diverse esigenze dei nostri clienti.
             </p>
           </div>

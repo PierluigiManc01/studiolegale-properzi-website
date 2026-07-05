@@ -152,10 +152,7 @@ const Candidature = () => {
           {/* Application Form */}
           <div className="max-w-2xl mx-auto">
             <div className="bg-properzi-navy p-10 md:p-12 rounded-lg shadow-lg">
-              <h3 className="text-2xl md:text-3xl font-cinzel text-properzi-beige mb-2 text-center">Invia la Tua Candidatura</h3>
-              <p className="text-center text-sm text-properzi-beige/70 mb-8">
-                Compila il form: la tua candidatura arriverà direttamente allo studio (properzi@studiolegale.it).
-              </p>
+              <h3 className="text-2xl md:text-3xl font-cinzel text-properzi-beige mb-4 text-center">Invia la Tua Candidatura</h3>
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
                   <FormField
