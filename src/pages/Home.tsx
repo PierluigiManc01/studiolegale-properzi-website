@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import ContactForm from "@/components/ContactForm";
 import { Phone, Mail, MapPin, ArrowRight } from "lucide-react";
@@ -8,6 +9,15 @@ import { useState } from "react";
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>Studio Legale Properzi | Avvocato Civilista a Roma</title>
+        <meta name="description" content="Studio Legale Properzi a Roma: assistenza legale civile a 360° con l'Avvocato Vanessa Properzi e un network di professionisti qualificati." />
+        <link rel="canonical" href="https://studiolegale-properzi.com/" />
+        <meta property="og:title" content="Studio Legale Properzi | Avvocato Civilista a Roma" />
+        <meta property="og:description" content="Studio Legale a Roma dell'Avvocato Vanessa Properzi. Consulenza e assistenza legale qualificata." />
+        <meta property="og:url" content="https://studiolegale-properzi.com/" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       {/* Hero Section */}
       <section id='home' className="relative min-h-[60vh] md:min-h-[70vh] flex items-center banner-clip overflow-hidden pt-20 md:pt-28 lg:pt-36 xl:pt-48 2xl:pt-64 pb-12">
         <div className="absolute inset-0 bg-properzi-beige md:bg-transparent">
@@ -21,7 +31,7 @@ const Home = () => {
         <div className="w-full px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-24 relative z-10">
           <div className="ml-auto max-w-2xl xl:max-w-3xl 2xl:max-w-4xl text-center md:text-right"> 
             <h1 className="text-2xl md:text-5xl lg:text-6xl 2xl:text-7xl font-cinzel font-bold mb-6 text-properzi-navy">
-              Studio Legale Properzi
+              Studio Legale Properzi — Avvocato Civilista a Roma
             </h1>
             <p className="text-base md:text-xl 2xl:text-2xl mb-8 text-properzi-navy/90">
               L'Avvocato Vanessa Properzi, con il suo Studio a Roma, coordina un network di professionisti esperti dedicati alla tua tutela legale.

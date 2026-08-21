@@ -1,10 +1,20 @@
 
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import ContactForm from "@/components/ContactForm";
 
 const Contact = () => {
   return (
     <div className="pt-24 md:pt-32 lg:pt-40 xl:pt-48 2xl:pt-56">
+      <Helmet>
+        <title>Contatti | Studio Legale Properzi Roma</title>
+        <meta name="description" content="Contatta lo Studio Legale Properzi a Roma: telefono, email e indirizzo per prenotare una consulenza con l'Avvocato Vanessa Properzi." />
+        <link rel="canonical" href="https://studiolegale-properzi.com/contact" />
+        <meta property="og:title" content="Contatti | Studio Legale Properzi Roma" />
+        <meta property="og:description" content="Prenota una consulenza con lo Studio Legale Properzi a Roma." />
+        <meta property="og:url" content="https://studiolegale-properzi.com/contact" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       {/* Hero Section */}
       <section className="bg-properzi-navy text-white py-10 pt-20 banner-clip overflow-hidden">
         <div className="container-custom">

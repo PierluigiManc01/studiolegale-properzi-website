@@ -89,6 +89,8 @@ const Navbar = () => {
             size="icon"
             onClick={toggleMobileMenu}
             className="text-properzi-navy"
+            aria-label={mobileMenuOpen ? "Chiudi menu" : "Apri menu"}
+            aria-expanded={mobileMenuOpen}
           >
             {mobileMenuOpen ? <X /> : <Menu />}
           </Button>
@@ -119,6 +121,7 @@ const Navbar = () => {
               size="icon"
               onClick={closeMobileMenu}
               className="text-properzi-navy"
+              aria-label="Chiudi menu"
             >
               <X />
             </Button>
