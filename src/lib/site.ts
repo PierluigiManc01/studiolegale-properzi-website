@@ -30,12 +30,14 @@ export const LAWYER = {
   degreeYear: 2001,
   cassazioneSince: 2016,
   albo: "A39992",
+  // Her own public profiles (LinkedIn...), for the Person schema `sameAs`.
+  profiles: ["https://www.linkedin.com/in/vanessa-properzi-15917971/"],
 } as const;
 
 // Public profiles of the studio (Google Business Profile, Ordine degli
-// Avvocati di Roma listing, LinkedIn...). They go in `sameAs` so search and AI
+// Avvocati di Roma listing...). They go in `sameAs` so search and AI
 // engines can tie them to the same entity. Add each URL only once it is live.
-export const PROFILES: string[] = [];
+export const PROFILES: string[] = ["https://www.google.com/search?kgmid=/g/11z__bnl88"];
 
 // When the practice-area and FAQ content last changed, taken from git history
 // at build time (see vite.config.ts), so it moves only when that content does.
