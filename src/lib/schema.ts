@@ -80,7 +80,7 @@ export const lawyerSchema = (): JsonLd => ({
     name: `Abilitazione al patrocinio davanti alla Corte di Cassazione (dal ${LAWYER.cassazioneSince})`,
     credentialCategory: "Abilitazione professionale",
   },
-  ...(PROFILES.length > 0 && { sameAs: PROFILES }),
+  ...(LAWYER.profiles.length > 0 && { sameAs: [...LAWYER.profiles] }),
   image: `${SITE_URL}/photos/vanessa.webp`,
   worksFor: { "@id": STUDIO_ID },
   workLocation: { "@id": STUDIO_ID },
