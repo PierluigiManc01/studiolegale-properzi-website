@@ -106,7 +106,7 @@ export const webPageSchema = (name: string, path: string, serviceId?: string): J
   url: absoluteUrl(path),
   name,
   inLanguage: "it-IT",
-  dateModified: CONTENT_UPDATED,
+  ...(CONTENT_UPDATED && { dateModified: CONTENT_UPDATED }),
   about: { "@id": serviceId ?? STUDIO_ID },
 });
 

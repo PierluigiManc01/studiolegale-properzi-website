@@ -37,10 +37,10 @@ export const LAWYER = {
 // engines can tie them to the same entity. Add each URL only once it is live.
 export const PROFILES: string[] = [];
 
-// When the practice-area and FAQ content was last reviewed. Shown on the
-// pages, and used as dateModified in the JSON-LD and lastmod in the sitemap.
-// Update it whenever the legal content is revised, not on every deploy.
-export const CONTENT_UPDATED = "2026-11-02";
+// When the practice-area and FAQ content last changed, taken from git history
+// at build time (see vite.config.ts), so it moves only when that content does.
+// Shown on the pages and used as dateModified; null when git cannot tell.
+export const CONTENT_UPDATED: string | null = __CONTENT_UPDATED__ || null;
 
 export const absoluteUrl = (path: string) =>
   path === "/" ? `${SITE_URL}/` : `${SITE_URL}${path}`;

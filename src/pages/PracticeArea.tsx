@@ -8,12 +8,14 @@ import { getPracticeArea, practiceAreas, practiceAreaPath } from "@/content/prac
 import { breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
 import { CONTENT_UPDATED, SITE_URL, STUDIO } from "@/lib/site";
 
-const updatedLabel = new Date(`${CONTENT_UPDATED}T12:00:00Z`).toLocaleDateString("it-IT", {
-  day: "numeric",
-  month: "long",
-  year: "numeric",
-  timeZone: "UTC",
-});
+const updatedLabel = CONTENT_UPDATED
+  ? new Date(`${CONTENT_UPDATED}T12:00:00Z`).toLocaleDateString("it-IT", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+      timeZone: "UTC",
+    })
+  : null;
 
 const PracticeArea = () => {
   const { slug = "" } = useParams();
@@ -85,7 +87,9 @@ const PracticeArea = () => {
             <FaqList faqs={area.faqs} />
             <p className="mt-6 text-sm text-properzi-navy/75">
               Le risposte hanno valore informativo generale e non sostituiscono una consulenza sul caso concreto.
-              Ultimo aggiornamento: <time dateTime={CONTENT_UPDATED}>{updatedLabel}</time>.
+              {CONTENT_UPDATED && (
+                <> Ultimo aggiornamento: <time dateTime={CONTENT_UPDATED}>{updatedLabel}</time>.</>
+              )}
             </p>
           </div>
 
