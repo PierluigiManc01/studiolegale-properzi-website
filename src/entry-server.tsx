@@ -4,8 +4,9 @@ import { StaticRouter } from "react-router-dom/server";
 import { HelmetProvider, type HelmetServerState } from "react-helmet-async";
 import App from "./App";
 import { practiceAreas, practiceAreaPath } from "./content/practice-areas";
+import { CONTENT_UPDATED, SITE_URL, STUDIO } from "./lib/site";
 
-export { practiceAreas, practiceAreaPath };
+export { practiceAreas, practiceAreaPath, CONTENT_UPDATED, SITE_URL, STUDIO };
 
 // Every URL that gets its own static HTML file at build time.
 export const prerenderRoutes = [

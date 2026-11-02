@@ -1,4 +1,4 @@
-import { SITE_URL, STUDIO, absoluteUrl } from "@/lib/site";
+import { CONTENT_UPDATED, LAWYER, PROFILES, SITE_URL, STUDIO, absoluteUrl } from "@/lib/site";
 import { practiceAreas, practiceAreaPath, type Faq, type PracticeArea } from "@/content/practice-areas";
 
 type JsonLd = Record<string, unknown>;
@@ -44,6 +44,7 @@ export const legalServiceSchema = (): JsonLd => ({
   ],
   areaServed: { "@type": "City", name: "Roma" },
   knowsLanguage: "it",
+  ...(PROFILES.length > 0 && { sameAs: PROFILES }),
   founder: { "@id": LAWYER_ID },
   employee: { "@id": LAWYER_ID },
   hasOfferCatalog: {
@@ -67,6 +68,19 @@ export const lawyerSchema = (): JsonLd => ({
   name: STUDIO.lawyerName,
   honorificPrefix: "Avv.",
   jobTitle: "Avvocato cassazionista",
+  url: `${SITE_URL}/`,
+  alumniOf: { "@type": "CollegeOrUniversity", name: LAWYER.university },
+  identifier: {
+    "@type": "PropertyValue",
+    propertyID: "Numero di iscrizione all'Albo degli Avvocati di Roma",
+    value: LAWYER.albo,
+  },
+  hasCredential: {
+    "@type": "EducationalOccupationalCredential",
+    name: `Abilitazione al patrocinio davanti alla Corte di Cassazione (dal ${LAWYER.cassazioneSince})`,
+    credentialCategory: "Abilitazione professionale",
+  },
+  ...(PROFILES.length > 0 && { sameAs: PROFILES }),
   image: `${SITE_URL}/photos/vanessa.webp`,
   worksFor: { "@id": STUDIO_ID },
   workLocation: { "@id": STUDIO_ID },
@@ -76,12 +90,24 @@ export const lawyerSchema = (): JsonLd => ({
 export const serviceSchema = (area: PracticeArea): JsonLd => ({
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": `${absoluteUrl(practiceAreaPath(area.slug))}#service`,
   name: area.name,
   serviceType: area.name,
   description: area.metaDescription,
   url: absoluteUrl(practiceAreaPath(area.slug)),
   provider: { "@id": STUDIO_ID },
   areaServed: { "@type": "City", name: "Roma" },
+});
+
+export const webPageSchema = (name: string, path: string, serviceId?: string): JsonLd => ({
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": absoluteUrl(path),
+  url: absoluteUrl(path),
+  name,
+  inLanguage: "it-IT",
+  dateModified: CONTENT_UPDATED,
+  about: { "@id": serviceId ?? STUDIO_ID },
 });
 
 export const faqSchema = (faqs: Faq[]): JsonLd => ({

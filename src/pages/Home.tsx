@@ -205,7 +205,7 @@ const Home = () => {
                 <div className="p-6 text-center">
                   <h3 className="font-cinzel text-2xl text-properzi-navy font-medium mb-1">Avv. Vanessa Properzi</h3>
                   <p className="text-properzi-gold font-semibold mb-2">Titolare dello Studio - Avvocato Civilista</p>
-                  <p className="text-properzi-navy/80 text-sm">Avvocato cassazionista esperta in diritto civile a Roma, da oltre 20 anni tutela con successo i propri assistiti al cuore della capitale.</p>
+                  <p className="text-properzi-navy/80 text-sm">Avvocato cassazionista esperta in diritto civile a Roma da oltre 20 anni.</p>
                 </div>
               </div>
             </div>

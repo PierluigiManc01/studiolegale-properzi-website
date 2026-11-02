@@ -5,8 +5,15 @@ import Seo from "@/components/Seo";
 import FaqList from "@/components/FaqList";
 import NotFound from "@/pages/NotFound";
 import { getPracticeArea, practiceAreas, practiceAreaPath } from "@/content/practice-areas";
-import { breadcrumbSchema, faqSchema, serviceSchema } from "@/lib/schema";
-import { STUDIO } from "@/lib/site";
+import { breadcrumbSchema, faqSchema, serviceSchema, webPageSchema } from "@/lib/schema";
+import { CONTENT_UPDATED, SITE_URL, STUDIO } from "@/lib/site";
+
+const updatedLabel = new Date(`${CONTENT_UPDATED}T12:00:00Z`).toLocaleDateString("it-IT", {
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  timeZone: "UTC",
+});
 
 const PracticeArea = () => {
   const { slug = "" } = useParams();
@@ -24,6 +31,7 @@ const PracticeArea = () => {
         description={area.metaDescription}
         path={path}
         jsonLd={[
+          webPageSchema(area.metaTitle, path, `${SITE_URL}${path}#service`),
           serviceSchema(area),
           faqSchema(area.faqs),
           breadcrumbSchema([
@@ -77,6 +85,7 @@ const PracticeArea = () => {
             <FaqList faqs={area.faqs} />
             <p className="mt-6 text-sm text-properzi-navy/75">
               Le risposte hanno valore informativo generale e non sostituiscono una consulenza sul caso concreto.
+              Ultimo aggiornamento: <time dateTime={CONTENT_UPDATED}>{updatedLabel}</time>.
             </p>
           </div>
 
