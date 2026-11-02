@@ -1,6 +1,8 @@
 
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { practiceAreas, practiceAreaPath } from "@/content/practice-areas";
+import { STUDIO } from "@/lib/site";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,12 +10,15 @@ const Footer = () => {
   return (
     <footer className="bg-properzi-navy text-white">
       <div className="container mx-auto px-4 py-8 md:py-10">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <img
-              src="/photos/logo.png"
-              alt="Properzi Studio Legale"
-              className="h-20 md:h-30"
+              src="/photos/logo-256.webp"
+              alt="Studio Legale Properzi"
+              width={439}
+              height={438}
+              loading="lazy"
+              className="h-20 md:h-28 w-auto"
             />
             <p className="text-sm mt-4 text-properzi-beige/90">
               Properzi Studio Legale offre servizi legali con eccellenza ed integrità, al servizio del cliente.
@@ -34,7 +39,7 @@ const Footer = () => {
                 </Link>
               </li>*/}
               <li>
-                <Link to="/contact" className="hover:text-properzi-beige transition-colors">
+                <Link to="/contatti" className="hover:text-properzi-beige transition-colors">
                   Contatti
                 </Link>
               </li>
@@ -43,27 +48,44 @@ const Footer = () => {
                   Candidature
                 </Link>
               </li>
+              <li>
+                <Link to="/privacy" className="hover:text-properzi-beige transition-colors">
+                  Privacy
+                </Link>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="font-cinzel text-xl mb-4 text-properzi-beige">Aree di Pratica</h3>
+            <ul className="space-y-2">
+              {practiceAreas.map((area) => (
+                <li key={area.slug}>
+                  <Link to={practiceAreaPath(area.slug)} className="hover:text-properzi-beige transition-colors">
+                    {area.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div>
             <h3 className="font-cinzel text-xl mb-4 text-properzi-beige">Informazioni di Contatto</h3>
             <ul className="space-y-3">
               <li className="flex items-start">
-                <Phone size={18} className="mr-2 mt-1 text-properzi-beige" />
-                <a href="tel:+0645435416" className="text-white hover:text-properzi-beige transition-colors">
-                  <span >+0645435416</span>
+                <Phone size={18} className="mr-2 mt-1 flex-shrink-0 text-properzi-beige" aria-hidden="true" />
+                <a href={`tel:${STUDIO.phone}`} className="text-white hover:text-properzi-beige transition-colors">
+                  <span>{STUDIO.phoneDisplay}</span>
                 </a>
               </li>
               <li className="flex items-start">
-                <Mail size={18} className="mr-2 mt-1 text-properzi-beige" />
+                <Mail size={18} className="mr-2 mt-1 flex-shrink-0 text-properzi-beige" aria-hidden="true" />
                 <a href="mailto:vanessa.properzi@libero.it" className="text-white hover:text-properzi-beige transition-colors">
                   <span>vanessa.properzi@libero.it</span>
                 </a>
               </li>
               <li className="flex items-start">
-                <MapPin size={18} className="mr-2 mt-1 text-properzi-beige" />
-                < a href="https://maps.app.goo.gl/uLw9hFkohpKQF1CY7" className="text-white hover:text-properzi-beige transition-colors">
-                  <span >Piazzale Benito Juarez 10/11<br />Roma, RM 00144</span>
+                <MapPin size={18} className="mr-2 mt-1 flex-shrink-0 text-properzi-beige" aria-hidden="true" />
+                <a href={STUDIO.mapsUrl} target="_blank" rel="noopener noreferrer" className="text-white hover:text-properzi-beige transition-colors">
+                  <span>{STUDIO.street}<br />{STUDIO.postalCode} {STUDIO.city} ({STUDIO.district})</span>
                 </a>
               </li>
             </ul>
@@ -72,7 +94,7 @@ const Footer = () => {
 
         <div className="border-t border-white/10 pt-6">
           <p className="text-sm text-white/70 text-center">
-            © {currentYear} Properzi Studio Legale. Tutti i diritti riservati.
+            © {currentYear} Studio Legale Properzi · Avv. Vanessa Properzi · Roma. Tutti i diritti riservati.
           </p>
         </div>
       </div>

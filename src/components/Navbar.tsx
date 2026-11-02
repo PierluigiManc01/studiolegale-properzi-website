@@ -45,8 +45,10 @@ const Navbar = () => {
           className="flex items-center"
         >
           <img
-            src="/photos/logo.png"
-            alt="Properzi Studio Legale"
+            src="/photos/logo-256.webp"
+            alt="Studio Legale Properzi, home"
+            width={439}
+            height={438}
             className="h-14 sm:h-16 md:h-20 lg:h-24 xl:h-28 2xl:h-32 w-auto"
           />
         </Link>
@@ -66,7 +68,13 @@ const Navbar = () => {
             Casi di Successo
           </Link>*/}
           <Link
-            to="/contact"
+            to="/aree-di-pratica"
+            className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm lg:text-base xl:text-lg 2xl:text-xl"
+          >
+            Aree di Pratica
+          </Link>
+          <Link
+            to="/contatti"
             className="text-properzi-navy hover:text-properzi-beige font-medium transition-colors uppercase tracking-wider text-sm lg:text-base xl:text-lg 2xl:text-xl"
           >
             Contatti
@@ -78,7 +86,7 @@ const Navbar = () => {
             Candidature
           </Link>
           <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors uppercase text-xs lg:text-sm xl:text-base 2xl:text-lg tracking-wider px-4 py-2 lg:px-6 lg:py-5 xl:px-8 xl:py-6 2xl:px-10 2xl:py-7">
-          <Link to="/contact">Prenota Consulenza</Link>
+          <Link to="/contatti">Prenota Consulenza</Link>
           </Button>
         </div>
 
@@ -111,9 +119,11 @@ const Navbar = () => {
           <div className="w-full px-4 md:px-8 lg:px-12 flex items-center justify-between py-4">
             <Link to="/" className="flex items-center" onClick={closeMobileMenu}>
               <img
-                src="/photos/logo.png"
-                alt="Properzi Studio Legale"
-                className="h-16"
+                src="/photos/logo-256.webp"
+                alt="Studio Legale Properzi, home"
+                width={439}
+                height={438}
+                className="h-16 w-auto"
               />
             </Link>
             <Button
@@ -135,7 +145,14 @@ const Navbar = () => {
               Home
             </Link>
             <Link
-              to="/contact"
+              to="/aree-di-pratica"
+              className="text-properzi-navy hover:text-properzi-navy/70 font-medium transition-colors uppercase tracking-wider text-lg py-2"
+              onClick={closeMobileMenu}
+            >
+              Aree di Pratica
+            </Link>
+            <Link
+              to="/contatti"
               className="text-properzi-navy hover:text-properzi-navy/70 font-medium transition-colors uppercase tracking-wider text-lg py-2"
               onClick={closeMobileMenu}
             >
@@ -149,7 +166,7 @@ const Navbar = () => {
               Candidature
             </Link>
             <Button asChild className="bg-properzi-navy hover:bg-properzi-navy/80 text-white transition-colors uppercase text-sm tracking-wider w-full py-4">
-              <Link to="/contact" onClick={closeMobileMenu}>Prenota Consulenza</Link>
+              <Link to="/contatti" onClick={closeMobileMenu}>Prenota Consulenza</Link>
             </Button>
           </div>
         </div>

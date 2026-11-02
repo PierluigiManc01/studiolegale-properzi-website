@@ -1,41 +1,39 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import Home from "./pages/Home";
-//import SuccessStories from "./pages/SuccessStories";
-import Contact from "./pages/Contact";
-import Candidature from "./pages/Candidature";
+import PracticeArea from "./pages/PracticeArea";
+import { pageRoutes } from "./routes";
 import CookieConsent from "./components/CookieConsent";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// The router is supplied by the entry point: BrowserRouter in the browser
+// (main.tsx), StaticRouter when pages are prerendered (entry-server.tsx).
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Navbar />
-        <main className="min-h-screen">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            {/* <Route path="/success-stories" element={<SuccessStories />} /> */} 
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/candidature" element={<Candidature />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
-        <CookieConsent />
-      </BrowserRouter>
+      <ScrollToTop />
+      <Navbar />
+      <main className="min-h-screen">
+        <Routes>
+          {pageRoutes.map(({ path, element }) => (
+            <Route key={path} path={path} element={element} />
+          ))}
+          <Route path="/aree-di-pratica/:slug" element={<PracticeArea />} />
+          <Route path="/contact" element={<Navigate to="/contatti" replace />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      <Footer />
+      <CookieConsent />
     </TooltipProvider>
   </QueryClientProvider>
 );
