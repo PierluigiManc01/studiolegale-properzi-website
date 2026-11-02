@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -126,6 +127,10 @@ const ContactForm = () => {
         >
           {isLoading ? "Invio in corso..." : "Invia Messaggio"}
         </Button>
+        <p className="text-xs text-properzi-navy/75 text-center">
+          Inviando il messaggio dichiari di aver letto l'
+          <Link to="/privacy" className="underline underline-offset-4 hover:text-properzi-navy">informativa privacy</Link>.
+        </p>
       </form>
     </Form>
   );

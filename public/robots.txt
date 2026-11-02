@@ -1,16 +1,24 @@
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
-Allow: /
+# Studio Legale Properzi — https://www.studiolegale-properzi.com
+# Search engines and AI assistants are welcome: being read is how the
+# studio gets cited when people in Rome ask for a lawyer.
 
 User-agent: *
 Allow: /
+Disallow: /api/
 
-Sitemap: https://studiolegale-properzi.com/sitemap.xml
+# AI search and assistant crawlers (explicit, so intent is unambiguous)
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+Sitemap: https://www.studiolegale-properzi.com/sitemap.xml

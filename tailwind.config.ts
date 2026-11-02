@@ -56,6 +56,8 @@ export default {
 				properzi: {
 					navy: '#2B3A4A',
 					beige: '#D7C497',
+					// beige fails contrast on white (1.7:1): use gold for text on light surfaces
+					gold: '#7D6327',
 					lightBeige: '#F5F0E5',
 					darkNavy: '#1E2A35',
 					gray: '#6B7A8A'

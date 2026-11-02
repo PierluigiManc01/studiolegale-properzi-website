@@ -1,6 +1,4 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Cinzel:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -50,6 +48,14 @@
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
+  }
+
+  ::selection {
+    @apply bg-properzi-beige text-properzi-navy;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-properzi-navy ring-offset-2;
   }
 }
 
