@@ -14,7 +14,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const dist = path.join(root, "dist");
 const template = fs.readFileSync(path.join(dist, "index.html"), "utf-8");
 const server = await import(pathToFileURL(path.join(root, "dist-ssr", "entry-server.js")).href);
-const { render, prerenderRoutes, practiceAreas, practiceAreaPath, SITE_URL, STUDIO } = server;
+const { render, prerenderRoutes, sitemapPages, practiceAreas, practiceAreaPath, SITE_URL, STUDIO } = server;
 
 const outFile = (route) =>
   route === "/" ? path.join(dist, "index.html") : path.join(dist, `${route.slice(1)}.html`);
@@ -32,32 +32,15 @@ for (const route of prerenderRoutes) writePage(route, outFile(route));
 // Vercel serves dist/404.html, with a real 404 status, for any unknown path.
 writePage("/404", path.join(dist, "404.html"));
 
-// Every prerendered route is in the sitemap (except the noindex ones), so a new
-// page appears here without touching this file. lastmod is the date of the last
-// git commit to the source files the page is built from; a page whose date git
-// cannot give carries no lastmod rather than a wrong one.
-const areaSlugs = new Set(practiceAreas.map((a) => practiceAreaPath(a.slug)));
-const sourcesFor = (route) => {
-  if (areaSlugs.has(route)) return ["src/content/practice-areas.ts"];
-  const pageFile = {
-    "/": ["src/pages/Home.tsx", "src/content/practice-areas.ts", "src/lib/site.ts"],
-    "/aree-di-pratica": ["src/pages/PracticeAreas.tsx", "src/content/practice-areas.ts"],
-    "/contatti": ["src/pages/Contact.tsx", "src/lib/site.ts"],
-    "/candidature": ["src/pages/Candidature.tsx"],
-  };
-  return pageFile[route] ?? [];
-};
-const lastmodFor = (route) => {
-  const files = sourcesFor(route);
-  return files.length > 0 ? gitLastModified(files) : null;
-};
-const noindexRoutes = new Set(["/privacy"]);
+// The pages come from the route registry (src/routes.tsx), so a new page is
+// listed without touching this file. lastmod is the date of the last git commit
+// to the files the page is built from; a page whose date git cannot give carries
+// no lastmod rather than a wrong one.
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${prerenderRoutes
-  .filter((route) => !noindexRoutes.has(route))
-  .map((route) => {
-    const lastmod = lastmodFor(route);
+${sitemapPages
+  .map(({ path: route, sources = [] }) => {
+    const lastmod = sources.length > 0 ? gitLastModified(sources) : null;
     return `  <url>\n    <loc>${SITE_URL}${route === "/" ? "/" : route}</loc>${lastmod ? `\n    <lastmod>${lastmod}</lastmod>` : ""}\n  </url>`;
   })
   .join("\n")}
