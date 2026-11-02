@@ -97,7 +97,7 @@ const Home = () => {
         jsonLd={[legalServiceSchema(), lawyerSchema(), faqSchema(studioFaqs)]}
       />
       {/* Hero Section */}
-      <section id='home' className="relative min-h-[60vh] md:min-h-[70vh] flex items-center banner-clip overflow-hidden pt-20 md:pt-28 lg:pt-36 xl:pt-48 2xl:pt-64 pb-12">
+      <section id='home' className="relative min-h-[60vh] md:min-h-[70vh] flex items-center banner-clip overflow-hidden pt-20 md:pt-28 lg:pt-36 xl:pt-48 2xl:pt-64 pb-24 md:pb-36 lg:pb-40">
         <div className="absolute inset-0 bg-properzi-beige md:bg-transparent">
           {/* Only desktop shows the photo: the <source> media query keeps phones from downloading it. */}
           <picture>
@@ -118,10 +118,10 @@ const Home = () => {
         <div className="w-full px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-24 relative z-10">
           <div className="ml-auto max-w-2xl xl:max-w-3xl 2xl:max-w-4xl text-center md:text-right">
             <h1 className="text-2xl md:text-5xl lg:text-6xl 2xl:text-7xl font-cinzel font-bold mb-6 text-properzi-navy text-balance">
-              Studio Legale Properzi — Avvocato Civilista a Roma
+              Studio Legale Properzi
             </h1>
             <p className="text-base md:text-xl 2xl:text-2xl mb-8 text-properzi-navy/90">
-              L'Avvocato Vanessa Properzi, con il suo Studio all'EUR, coordina un network di professionisti esperti dedicati alla tua tutela legale.
+              Da oltre vent'anni l'Avv. Vanessa Properzi, civilista abilitata al patrocinio in Cassazione, segue personalmente ogni causa: dal primo colloquio nello Studio all'EUR fino all'ultimo grado di giudizio.
             </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-end gap-3 relative z-40">
               <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors py-4 md:py-6 px-6 md:px-8 2xl:py-8 2xl:px-10 2xl:text-lg">
@@ -295,7 +295,7 @@ const Home = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="section-padding bg-properzi-lightBeige py-16">
+      <section id="domande-frequenti" className="section-padding bg-properzi-lightBeige py-16">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
             <h2 className="section-title">Domande frequenti</h2>
