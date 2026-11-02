@@ -35,7 +35,7 @@ export const LAWYER = {
 // Public profiles of the studio (Google Business Profile, Ordine degli
 // Avvocati di Roma listing, LinkedIn...). They go in `sameAs` so search and AI
 // engines can tie them to the same entity. Add each URL only once it is live.
-export const PROFILES: string[] = ["https://share.google/3v9RQA6ODk6lIGKeO"];
+export const PROFILES: string[] = ["https://www.google.com/search?kgmid=/g/11z__bnl88"];
 
 // When the practice-area and FAQ content last changed, taken from git history
 // at build time (see vite.config.ts), so it moves only when that content does.
