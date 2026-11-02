@@ -117,12 +117,9 @@ const Home = () => {
         </div>
         <div className="w-full px-4 md:px-8 lg:px-12 xl:px-16 2xl:px-24 relative z-10">
           <div className="ml-auto max-w-2xl xl:max-w-3xl 2xl:max-w-4xl text-center md:text-right">
-            <h1 className="text-2xl md:text-5xl lg:text-6xl 2xl:text-7xl font-cinzel font-bold mb-6 text-properzi-navy text-balance">
-              Studio Legale Properzi
+            <h1 className="text-4xl md:text-6xl lg:text-7xl 2xl:text-8xl leading-tight font-cinzel font-bold mb-8 md:mb-10 text-properzi-navy">
+              Studio Legale<br />Properzi
             </h1>
-            <p className="text-base md:text-xl 2xl:text-2xl mb-8 text-properzi-navy/90">
-              Da oltre vent'anni l'Avv. Vanessa Properzi, civilista abilitata al patrocinio in Cassazione, segue personalmente ogni causa: dal primo colloquio nello Studio all'EUR fino all'ultimo grado di giudizio.
-            </p>
             <div className="flex flex-col sm:flex-row justify-center md:justify-end gap-3 relative z-40">
               <Button asChild className="bg-properzi-navy hover:bg-properzi-beige text-white hover:text-properzi-navy transition-colors py-4 md:py-6 px-6 md:px-8 2xl:py-8 2xl:px-10 2xl:text-lg">
                 <Link to="/contatti">Prenota Consulenza Legale</Link>
